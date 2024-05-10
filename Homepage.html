@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Puspa</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="footer-logo.png" alt="logo" class="logo">
+            </div>
+            <ul>
+                <li><a href="Homepage.html">DONASI</a></li>
+                <li><a href="Homepage.html">DONASI BERULANG</a></li>
+                <li><a href="Homepage.html">VOLUNTEER</a></li>
+                <li><a href="Homepage.html">TENTANG KAMI</a></li>
+                <li><a href="Homepage.html">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="heroimage">
+        <img src="hero_image2.jpg">
+        <a>PROGRAM UNGGULAN SISA PANGAN MENJADI ANUGERAH<br>________________________________</a>
+    </div>
+
+    <div class="tahap-div">
+        <a class="judul-tahap">TAHAP-TAHAP PUSPA</a>
+        <div class="tahap-items">
+            <div class="tahap1">
+                <img src="tahap1.png">
+                <a>Pengumpulan sampah organik dari penduduk sekitar</a>
+            </div>
+
+            <div class="tahap2">
+                <img src="tahap2.png">
+                <a>Pengolahan sampah menjadi kompos oleh sukarelawan</a>
+            </div>
+
+            <div class="tahap3">
+                <img src="tahap3.png">
+                <a>Pendistribusian kompos ke lokasi yang kekurangan pupuk bersubsidi</a>
+            </div>
+
+            <div class="tahap4">
+                <img src="tahap4.png">
+                <a>Pemanfaatan kompos oleh petani lokal yang membutuhkan</a>
+            </div>
+        </div>
+
+        <div class="btn-volunteer">
+            <button href="Homepage.html">VOLUNTEER</button>
+        </div>
+    </div>
+    
+    <div class="bottom-bar">
+        <div class="news">
+            <div class="news1">
+                <img src="news1.png">
+                <a><i>Stok Melimpah, Petani Malah Kekurangan Pupuk Bersubsidi.</i> <br><br> Petani yang selama ini kekurangan pupuk bersubsidi akhirnya bisa beli pupuk, tetapi nonsubsidi dengan diskon 40 persen.</a>
+            </div>
+
+            <div class="news1">
+                <img src="news1.png">
+                <a>Stok Melimpah, Petani Malah Kekurangan Pupuk Bersubsidi.
+                    Petani yang selama ini kekurangan pupuk bersubsidi akhirnya bisa beli pupuk, tetapi nonsubsidi dengan diskon 40 persen.</a>
+            </div>
+
+            <div class="news1">
+                <img src="news1.png">
+                <a>Stok Melimpah, Petani Malah Kekurangan Pupuk Bersubsidi.
+                    Petani yang selama ini kekurangan pupuk bersubsidi akhirnya bisa beli pupuk, tetapi nonsubsidi dengan diskon 40 persen.</a>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="judul-sidebar">
+                <a>Pencapaian Kami</a>
+            </div>
+            
+            <div class="stats1">
+                <img src="logo_donasi.png">
+                <div class="stats1-text">
+                    <a class="stats1-header">Jumlah donasi<br></a>
+                    <a id="satuan-donasi">Rp</a><a id="donasi-uang">15.430.000</a>
+                </div>
+            </div>
+
+            <div class="stats2">
+                <img src="logo_volunteer.png">
+                <div class="stats1-text">
+                    <a class="stats1-header">Jumlah sukarelawan<br></a>
+                    <a id="donasi" data-count="183">0</a>
+                </div>
+            </div>
+
+            <div class="stats3">
+                <img src="logo_kompos.png">
+                <div class="stats1-text">
+                    <a class="stats1-header">Jumlah kompos<br></a>
+                    <a id="donasi" data-count="430"></a><a id="satuan-donasi"> Kg</a>
+                </div>
+            </div>
+
+            <script>
+                const counters = document.querySelectorAll('#donasi');
+
+                counters.forEach(donasi => {
+                        let initial_count = 0;
+                        const target = donasi.dataset.count;
+                        console.log(target);
+
+                        const counting = setInterval(updateCounting, 20);
+
+                        function updateCounting() {
+                            initial_count += 1;
+                            donasi.innerText = initial_count;
+
+                            if (initial_count >= target) {
+                                clearInterval(counting);
+                            }
+                        }
+                })
+            </script>
+
+            <button class="btn-stats">
+                SELENGKAPNYA
+            </button>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="logo_puspa.png" alt="logo" class="footer-logo">
+            <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
+        </div>
+
+        <div class="contacts">
+            <div class="contact1">
+                <a href="#" class="fa fa-instagram" id="ig-logo"></a>
+                <div class="contact-name">
+                    <a id="ig-name">bersama.puspa.id</a>
+                </div>
+            </div>
+
+            <div class="contact2">
+                <a href="#" class="fa fa-facebook" id="fb-logo"></a>
+                <div class="contact-name">
+                    <a id="fb-name">Puspa Indonesia</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hyperlink-local">
+            <ul>
+                <li><a href="Homepage.html">DONASI</a></li>
+                <li><a href="Homepage.html">DONASI BERULANG</a></li>
+                <li><a href="Homepage.html">VOLUNTEER</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

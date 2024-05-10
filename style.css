@@ -1,0 +1,359 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+
+*{
+    font-family: 'Open Sans Hebrew', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #ECE9E4;
+    font-family: 'Open Sans Hebrew', serif;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 10px #bab09f;
+    z-index: 1000;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    height: 30px;
+}
+
+li a{
+    color: #575e57;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 30px;
+}
+
+li a:hover {
+    color: #499f49;
+    font-weight: 400;
+    text-shadow:#cbffca 0px 0px 10px;
+}
+
+body {
+    background-color: #ECE9E4;
+}
+
+.heroimage {
+    margin-bottom: 50px;
+}
+
+.heroimage img {
+    position: relative;
+    object-fit: contain;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.heroimage a {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-decoration: none;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: #f9f3f1;
+    text-shadow: 0px 1px 5px rgba(255,255,255,0.69);
+}
+
+.tahap-div {
+    align-items: center;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.judul-tahap {
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #406A40;
+}
+
+.tahap-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 100%;
+    margin-right: 50px;
+    margin-left: 50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tahap1, .tahap2, .tahap3, .tahap4{
+    display: inline-block;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    margin-bottom: 30px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color:#406A40;
+}
+
+.tahap1 img, .tahap2 img, .tahap3 img, .tahap4 img{
+    display: inline-block;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.tahap1:hover, .tahap2:hover, .tahap3:hover, .tahap4:hover{
+    width: 240px;
+    font-size: 18px;
+}
+
+.tahap1 img:hover, .tahap2 img:hover, .tahap3 img:hover, .tahap4 img:hover{
+    width: 240px;
+    height: 240px;
+}
+
+
+.btn-volunteer {
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 100px;
+}
+
+.tahap-div button {
+    margin-top: 20px;
+    width: 140px;
+    height: 50px;
+    background-color: #de8b3e;
+    border-radius: 10px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    color:#f0eeea;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+.tahap-div button:hover {
+    background-color: #f5a567;
+    font-size: 15px;
+    width:137px;
+    height:48px;
+}
+
+.bottom-bar {
+    display: flex;
+    max-width: 100%;
+    margin-top: 250px;
+    height:600px;
+}
+
+.news {
+    display: flex;
+    max-width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    height: 600px;
+    justify-content: left;
+    background-color: #335733;
+    overflow-x:scroll; 
+    overflow-y:hidden; 
+    z-index: 900;
+}
+
+.news::-webkit-scrollbar {
+    display: none;
+}
+
+.news img {
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: -1px 0px 10px 0px rgba(66, 121, 52, 0.75);
+}
+
+.news1 {
+    padding: 50px;
+    height: 400px;
+    width: 400px;
+    text-align: justify;
+}
+
+.news1 a {
+    text-align: justify;
+    color:#dbe5d6;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 15px;
+    font-weight: 475;
+}
+
+.sidebar {
+    max-height: 100%;
+    min-width: 400px;
+    background-color: #76a575;
+    padding: 50px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: bold;
+    color: #ECE9E4;
+}
+
+.judul-sidebar {
+    margin-top:10px;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.stats1, .stats2, .stats3 {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.stats1 img, .stats2 img, .stats3 img {
+    object-fit: contain;
+    max-width: 70px;
+}
+
+.stats1-text {
+    width: 200px;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.stats1-header a{
+    font-size: 9px;
+}
+
+#satuan-donasi {
+    font-size: 19px;
+}
+
+#donasi-uang {
+    font-size: 28px;
+}
+
+#donasi {
+    font-size: 28px;
+}
+
+.btn-stats {
+    margin-top: 60px;
+    width: 170px;
+    height: 50px;
+    background-color: #f0eeea;
+    border-radius: 10px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    color:#de8b3e;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+.btn-stats:hover {
+    background-color: #e0d1b2;
+    color: #d07035;
+}
+
+.footer {
+    display: flex;
+    width:100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left:60px;
+    padding-right:10px;
+    height: 300px;
+    background-color: #ECE9E4;
+    box-shadow: 1px 1px 9px 0px rgb(255, 224, 255);
+    z-index: 999;
+}
+
+.footer-logo {
+    margin-top:10px;
+    margin-bottom:10px;
+    display:inline-block;
+    width:360px;
+    color: #335733;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 17px;
+}
+
+.footer-logo img {
+    display: block;
+    width:290px;
+}
+
+.contacts{
+    margin-top: 21px;
+}
+
+.contact1, .contact2 {
+    max-width:100%;
+    display: flex;
+    margin-top: 10px;
+    color: #335733;
+}
+
+#ig-logo, #fb-logo {
+    flex: 1.2;
+    font-size: 30px;
+    margin-right: 10px;
+    color: #335733;
+}
+
+.contact-name {
+    flex: 7;    
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: 500;
+}
+
+.hyperlink-local {
+    flex: 10;
+    margin-left: 40px;
+    margin-top: 28px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
