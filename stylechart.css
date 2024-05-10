@@ -1,0 +1,298 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+html { scroll-behavior: smooth; }
+
+*{
+    font-family: 'Open Sans Hebrew', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #ECE9E4;
+    font-family: 'Open Sans Hebrew', serif;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 15px #ffdadad6;
+    z-index: 1000;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    height: 30px;
+}
+
+li a{
+    color: #575e57;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 30px;
+}
+
+li a:hover {
+    color: #499f49;
+    font-weight: 400;
+    text-shadow:#cbffca 0px 0px 10px;
+}
+
+#anchor1 {
+    scroll-margin-top: 70px;
+}
+
+#anchor2 {
+    scroll-margin-top: 130px;
+}
+
+#anchor3 {
+    scroll-margin-top: 300px;
+}
+
+.contents {
+    display: flex;
+    max-width: 100%;
+    height: fit-content;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height: 30%;
+    background-color: #335733;
+    margin-top: 20px;
+    padding: 10px;
+    justify-content: left;
+    text-align: left;
+    font-family: 'Open Sans Hebrew', sans;
+}
+
+.judul-sidebar {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ECE9E4;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+
+.sidebar li a{
+    padding: 10px;
+    display: block;
+    font-family: 'Open Sans Hebrew', sans;
+    font-size: 15px;
+    color: #ECE9E4;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.sidebar li a:hover{
+    background-color: #25442b;
+    border-radius: 10px;
+    z-index:-1;
+}
+
+.sidebar-bg {
+    min-width: 200px;
+    background-color: #335733;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 100%;
+    height: fit-content;
+    padding: 50px;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(32,140,101,1) 5%, rgba(48,143,79,1) 34%, rgba(72,148,78,1) 64%, rgba(118,165,117,1) 100%);
+}
+
+.flexbox{
+    display: flex;
+    background-color: #f6f1f1;
+    box-shadow: 0px 0px 10px #ffdadad6;
+    width: 383px;
+    height: 240px;
+    padding: 20px;
+    border-radius:10px;
+}
+
+.flexbox-big {
+    width:100%;
+    padding: 30px;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f6f1f1;
+    box-shadow: 0px 0px 10px #ffdadad6;
+    border-radius:10px;
+    justify-content: right;
+}
+
+.progress-bars {
+    display: flex;
+    gap: 40px;
+    width:100%;
+}
+
+.flexbox-med {
+    display: flex;
+    background-color: #f6f1f1;
+    box-shadow: 0px 0px 10px #ffdadad6;
+    width: 48.3%;
+    height: fit-content;
+    padding: 20px;
+    border-radius:10px;
+}
+
+.flexbox:hover, .flexbox-big:hover {
+    box-shadow: 0px 0px 20px #c2ffa8d6;
+}
+
+.diagram1, .diagram2, .diagram3 {
+    padding: 5px;
+    width:200px;
+    height: 200px;
+    background-color:  #f6f1f1;
+    border-radius: 8px;
+}
+
+.diagram4 {
+    flex: 2.5;
+    width: 100%;
+    height: 400px;
+}
+
+.diagram-text {
+    max-width: 100%;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    text-align: right;
+    color:#335733;
+}
+
+.diagram-text-big {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    min-width: 20%;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    text-align: right;
+    justify-content: right;
+    color:#335733;
+}
+
+.text {
+    width:100%;
+    max-width: 100%;
+    height: 70px;
+    display: inline;
+}
+
+
+.diagram-text h1, .diagram-text-big h1{
+    margin-top:10px;
+    font-size: 18px;
+    font-weight: 1000;
+    margin-bottom:10px;
+}
+
+.diagram-text-big h2 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.diagram-text a{
+    font-size: 20px;
+}
+
+.footer {
+    display: flex;
+    width:100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left:60px;
+    padding-right:10px;
+    height: 300px;
+    background-color: #ECE9E4;
+    box-shadow: -1px -5px 10px 0px rgba(174, 166, 140, 0.75);
+    z-index: 999;
+}
+
+.footer-logo {
+    margin-top:10px;
+    margin-bottom:10px;
+    display:inline-block;
+    width:360px;
+    color: #335733;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 17px;
+}
+
+.footer-logo img {
+    display: block;
+    width:290px;
+}
+
+.contacts{
+    margin-top: 21px;
+}
+
+.contact1, .contact2 {
+    max-width:100%;
+    display: flex;
+    margin-top: 10px;
+    color: #335733;
+}
+
+#ig-logo, #fb-logo {
+    flex: 1.2;
+    font-size: 30px;
+    margin-right: 10px;
+    color: #335733;
+}
+
+.contact-name {
+    flex: 7;    
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: 500;
+}
+
+.hyperlink-local {
+    flex: 10;
+    margin-left: 40px;
+    margin-top: 28px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}

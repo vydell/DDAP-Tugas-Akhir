@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <link rel="stylesheet" href="stylechart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @media screen and (min-width: 540px) and (max-width: 1370px) {
+            .diagram-text-big {
+                min-width: 170px;
+            }
+
+            .text {
+                width: 120px;
+                margin-left: 20px;
+            }
+
+            .diagram4 {
+                flex: 4;
+                justify-content: center;
+                width: 400px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <img src="/navbar_images/footer-logo.png" alt="logo" class="logo">
+            </div>
+            <ul>
+                <li><a href="Homepage.html">DONASI</a></li>
+                <li><a href="Homepage.html">DONASI BERULANG</a></li>
+                <li><a href="Homepage.html">VOLUNTEER</a></li>
+                <li><a href="Homepage.html">TENTANG KAMI</a></li>
+                <li><a href="Homepage.html">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="judul-sidebar">
+            <a>PENCAPAIAN KAMI</a>
+        </div>
+        
+        <ul>
+            <li><a href="#anchor1">DONASI SUKARELAWAN KOMPOS</a></li>
+            <li><a href="#anchor2">PETANI TERBANTU</a></li>
+            <li><a href="#anchor3">PROGRESS GOAL 2024</a></li>
+        </ul>
+    </div>
+
+    <div class="contents">
+        <div class="sidebar-bg"></div>
+
+        <div class="container" id="anchor1"> <!--contents-->
+            <div class="flexbox"> <!--diagram1/2/3-->
+                <div class="diagram1">
+                    <canvas id="doughnut1"></canvas>
+                </div>
+        
+                <div class="diagram-text">
+                    <h1>Jumlah <br>Donasi yang Tersalurkan</h1>
+                    <a>Rp15.430.000</a>
+                </div>
+            </div>
+        
+            <div class="flexbox">
+                <div class="diagram1">
+                    <canvas id="doughnut2"></canvas>
+                </div>
+        
+                <div class="diagram-text">
+                    <h1>Jumlah Sukarelawan Tergabung</h1>
+                    <a id="donasi" data-count="183">0</a>
+                </div>
+            </div>
+        
+            <div class="flexbox">
+                <div class="diagram1">
+                    <canvas id="doughnut3"></canvas>
+                </div>
+        
+                <div class="diagram-text">
+                    <h1>Jumlah Kompos yang Dihasilkan</h1>
+                    <a id="donasi" data-count="439">0</a><a> Kg</a>
+                </div>
+            </div>
+
+            <div class="flexbox-big" id="anchor2">
+                <div class="diagram4">
+                    <canvas id="bar1"></canvas>
+                </div>
+        
+                <div class="diagram-text-big">
+                    <div class="text">
+                        <h2>Desa Begawan</h2>
+                        <a>Rata-rata: 18</a>
+                    </div>
+                    <div class="text">
+                        <h2>Desa Lampau</h2>
+                        <a>Rata-rata: 8</a>
+                    </div>
+                    <div class="text">
+                        <h2>Desa Cikarung</h2>
+                        <a>Rata-rata: 23</a>
+                    </div>
+                    
+                    <h1 class="text">Jumlah <br>Petani yang Terbantu</h1>
+                </div>
+            </div>
+
+            <div class="progress-bars" id="anchor3">
+                <div class="flexbox-med">
+                </div>
+
+                <div class="flexbox-med">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="/navbar_images/logo_puspa.png" alt="logo" class="footer-logo">
+            <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
+        </div>
+
+        <div class="contacts">
+            <div class="contact1">
+                <a href="#" class="fa fa-instagram" id="ig-logo"></a>
+                <div class="contact-name">
+                    <a id="ig-name">bersama.puspa.id</a>
+                </div>
+            </div>
+
+            <div class="contact2">
+                <a href="#" class="fa fa-facebook" id="fb-logo"></a>
+                <div class="contact-name">
+                    <a id="fb-name">Puspa Indonesia</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hyperlink-local">
+            <ul>
+                <li><a href="Homepage.html">HALAMAN UTAMA</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="/charts/chart1.js"></script>
+    <script src="/charts/chart2.js"></script>
+    <script src="/charts/chart3.js"></script>
+    <script src="/charts/chart4.js"></script>
+
+    <script>
+        const counters = document.querySelectorAll('#donasi');
+
+        counters.forEach(donasi => {
+            let initial_count = 0;
+            const target = donasi.dataset.count;
+            console.log(target);
+
+            const counting = setInterval(updateCounting, 10);
+
+            function updateCounting() {
+                initial_count += 1;
+                donasi.innerText = initial_count;
+
+                if (initial_count >= target) {
+                    clearInterval(counting);
+                }
+            }
+        }) 
+    </script>
+
+</body>
+
+</html>

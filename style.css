@@ -1,6 +1,16 @@
 @import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 @import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
 
+@keyframes fadeIn {  
+    from {  
+        opacity:0;  
+    }  
+ 
+    to {  
+        opacity:1;  
+    }  
+}
+
 
 *{
     font-family: 'Open Sans Hebrew', serif;
@@ -91,7 +101,9 @@ body {
     text-align: center;
     color: #f9f3f1;
     text-shadow: 0px 1px 5px rgba(255,255,255,0.69);
+    animation: fadeIn 1s ease-in; 
 }
+
 
 .tahap-div {
     align-items: center;
@@ -103,7 +115,7 @@ body {
 .judul-tahap {
     font-family: 'Open Sans Hebrew', sans-serif;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 1000;
     color: #406A40;
 }
 
@@ -120,7 +132,7 @@ body {
 
 .tahap1, .tahap2, .tahap3, .tahap4{
     display: inline-block;
-    align-items: center;
+    justify-content: center;
     width: 200px;
     height: 300px;
     margin-bottom: 30px;
@@ -136,16 +148,27 @@ body {
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
+    opacity: 80%;
 }
 
 .tahap1:hover, .tahap2:hover, .tahap3:hover, .tahap4:hover{
+    transition-timing-function: ease;
+    transition-duration: 800ms;
+    animation-delay: 80ms;
     width: 240px;
+}
+
+.tahap1:hover, .tahap2:hover, .tahap3:hover, .tahap4:hover{
     font-size: 18px;
 }
 
 .tahap1 img:hover, .tahap2 img:hover, .tahap3 img:hover, .tahap4 img:hover{
+    transition-timing-function: ease;
+    transition-duration: 800ms;
+    animation-delay: 80ms;
     width: 240px;
     height: 240px;
+    opacity:100%;
 }
 
 
@@ -161,7 +184,7 @@ body {
     width: 140px;
     height: 50px;
     background-color: #de8b3e;
-    border-radius: 10px;
+    border-radius: 30px;
     font-family: 'Open Sans Hebrew', sans-serif;
     color:#f0eeea;
     font-weight: 550;
@@ -184,29 +207,33 @@ body {
 
 .news {
     display: flex;
-    max-width: 80%;
+    width: 100%;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 70px;
     padding-bottom: 50px;
     height: 600px;
     justify-content: left;
-    background-color: #335733;
+    background: linear-gradient(0deg, rgba(37,89,75,1) 5%, rgba(51,87,51,1) 100%);
     overflow-x:scroll; 
     overflow-y:hidden; 
     z-index: 900;
 }
 
 .news::-webkit-scrollbar {
-    display: none;
+    background-color: #1f351f;
+}
+
+.news::-webkit-scrollbar-thumb {
+    background-color:#5f945f
 }
 
 .news img {
     height: 200px;
     width: 300px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-bottom: 10px;
-    box-shadow: -1px 0px 10px 0px rgba(66, 121, 52, 0.75);
+    box-shadow: -1px 0px 13px 0px rgba(21, 46, 17, 0.738);
 }
 
 .news1 {
@@ -227,7 +254,7 @@ body {
 .sidebar {
     max-height: 100%;
     min-width: 400px;
-    background-color: #76a575;
+    background: linear-gradient(0deg, rgba(93,142,113,1) 5%, rgba(118,165,117,1) 100%);
     padding: 50px;
     justify-content: center;
     text-align: center;
@@ -277,21 +304,24 @@ body {
     font-size: 28px;
 }
 
-.btn-stats {
+.btn-stats, .btn-stats a:active, .btn-stats a:visited {
     margin-top: 60px;
     width: 170px;
     height: 50px;
     background-color: #f0eeea;
-    border-radius: 10px;
+    border-radius: 30px;
     font-family: 'Open Sans Hebrew', sans-serif;
     color:#de8b3e;
     font-weight: 550;
     font-size: 16px;
 }
 
-.btn-stats:hover {
+.btn-stats:hover{
     background-color: #e0d1b2;
-    color: #d07035;
+}
+
+.btn-stats a:hover {
+    color: #bb5b1f;
 }
 
 .footer {
@@ -303,7 +333,7 @@ body {
     padding-right:10px;
     height: 300px;
     background-color: #ECE9E4;
-    box-shadow: 1px 1px 9px 0px rgb(255, 224, 255);
+    box-shadow: -1px -7px 13px 0px rgba(0,0,0,0.75);
     z-index: 999;
 }
 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            display: flex;
+            gap:10px;
+            flex-wrap: wrap;
+            margin-left: 50px;
+            max-width: 100%;
+            height:100%;
+            background-color: violet;
+        }
+
+        .flexbox {
+            display: flex;
+            background-color: red;
+            width: 400px;
+            padding: 20px;
+        }
+
+        .diagram1 {
+            height: 230px;
+            width: 230px;
+            background-color: antiquewhite;
+        }
+
+        .diagram-text {
+            width: 100%;
+            font-family: sans-serif;
+            background-color: blue;
+            text-align: right;
+        }
+
+        .diagram5 {
+            height: 600px;
+            width: 600px;
+            background-color: aqua;
+        }
+
+        #progress1 {
+            height: 600px;
+            width: 600px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container"> <!--contents-->
+        <div class="flexbox"> <!--diagram1/2/3-->
+            <div class="diagram1">
+                <canvas id="doughnut2"></canvas>
+            </div>
+    
+            <div class="diagram-text">
+                <h1>Test heading 1 2 3</h1> <br>
+                <a>Rp 15.002.023</a>
+            </div>
+        </div>
+    
+        <div class="flexbox">
+            <div class="diagram1">
+                <canvas id="doughnut2"></canvas>
+            </div>
+    
+            <div class="diagram-text">
+                <h1>Test heading 1 2 3</h1> <br>
+                <a>Rp 15.002.023</a>
+            </div>
+        </div>
+    
+        <div class="flexbox">
+            <div class="diagram1">
+                <canvas id="doughnut2"></canvas>
+            </div>
+    
+            <div class="diagram-text">
+                <h1>Test heading 1 2 3</h1> <br>
+                <a>Rp 15.002.023</a>
+            </div>
+        </div>
+
+        <div class="flexbox-big" id="anchor2">
+            <div class="diagram2">
+                <canvas id="bar1"></canvas>
+            </div>
+    
+            <div class="diagram-text">
+                <h1>Jumlah <br>Donasi yang Tersalurkan</h1>
+                <a>Rp15.430.000</a>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div class="diagram5">
+        <canvas id="progress1"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    <script src="chart2.js"></script>
+    <script src="chart4.js"></script>
+    <script src="/charts/chart5.js"></script>
+</body>
+</html>
