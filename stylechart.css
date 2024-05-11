@@ -461,9 +461,23 @@ html { scroll-behavior: smooth; }
 
 .hyperlink-local {
     flex: 10;
+    height: 30px;
+    padding-right: 40px;
     margin-left: 40px;
     margin-top: 28px;
     height: 30px;
     display: flex;
     justify-content: flex-end;
+}
+
+.hyperlink-local li, .hyperlink-local a {
+    font-size: 18px;
+    list-style: none;
+    color: #1f351f;
+}
+
+.hyperlink-local li a:hover {
+    color: #499f49;
+    font-weight: 400;
+    text-shadow:#cbffca 0px 0px 10px;
 }

@@ -13,44 +13,78 @@
     background-color: #ECE9E4;
 }
 .navbar {
-    position: sticky;
-    top: 0;
-    background: #ECE9E4;
-    font-family: 'Open Sans Hebrew', serif;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    box-shadow: 0px 0px 10px #bab09f;
-    z-index: 1000;
+  position: sticky;
+  top: 0;
+  background: #ECE9E4;
+  font-family: 'Open Sans Hebrew', serif;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0px 0px 10px #bab09f;
+  z-index: 1000;
 }
+
 .navdiv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .logo {
-    width: 150px;
-    margin-right: 20px;
-    margin-left: 10px;
+  width: 150px;
+  margin-right: 20px;
+  margin-left: 10px;
+  z-index: 1000;
 }
-ul {
-    margin-left: 20px;
+
+.navbar ul {
+  display:flex;
+  margin-left: 20px;
 }
-li {
-    list-style: none;
-    display: inline-block;
-    height: 30px;
+
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  height: 30px;
 }
-li a{
-    color: #575e57;
-    font-size: 18px;
-    font-weight: 400;
-    margin-right: 30px;
+
+.navbar li a{
+  color: #575e57;
+  font-size: 18px;
+  font-weight: 400;
+  margin-right: 30px;
 }
-li a:hover {
-    color: #499f49;
-    font-weight: 400;
+
+.navbar li a:hover {
+  color: #499f49;
+  font-weight: 400;
+  text-shadow:#cbffca 0px 0px 10px;
+}
+
+.open-menu, .close-menu {
+  position: absolute;
+  color:#1f351f;
+  cursor: pointer;
+  font-size: 20px;
+  display:none;
+  z-index: 1000;
+}
+
+#check {
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 0;
+  right: 24px;
 }
 
 body {
@@ -59,12 +93,13 @@ body {
 }
 
 .contents {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top:60px;
     margin-bottom: 60px;
     padding: 40px;
-    max-width: 800px;
+    max-width: 60%;
     border-radius: 20px;
     box-shadow: 0px 0px 10px #bab09f;
 }
