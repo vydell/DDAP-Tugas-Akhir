@@ -7,7 +7,44 @@
     <link rel="stylesheet" href="stylechart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        @media screen and (min-width: 540px) and (max-width: 1370px) {
+        @media screen and (min-width: 1000px) and (max-width: 1250px) {
+            .diagram4 {
+                justify-content: center;
+                width: 600px;
+                height: auto;
+            }
+
+            .diagram-text-big {
+                display: flex;
+                flex-wrap: wrap;
+                min-width: 170px;
+            }
+
+            .text {
+                width: 120px;
+                margin-left: 20px;
+            }
+
+            .flexbox-big {
+                display: block;
+                justify-content: center;
+            }
+
+        }
+
+        @media screen and (min-width: 650px) and (max-width: 1000px) {
+            .flexbox {
+                min-width: 100%;
+            }
+
+            .diagram1, .diagram2, .diagram3 {
+                max-width: 100%;
+            }
+
+            .diagram-text {
+                width: 100%;
+            }
+
             .diagram-text-big {
                 min-width: 170px;
             }
@@ -17,10 +54,15 @@
                 margin-left: 20px;
             }
 
-            .diagram4 {
-                flex: 4;
+            .flexbox-big {
+                display: block;
                 justify-content: center;
-                width: 400px;
+            }
+
+            .diagram4 {
+                display: block;
+                justify-content: center;
+                width: 500px;
                 height: auto;
             }
         }
@@ -76,7 +118,7 @@
                 </div>
         
                 <div class="diagram-text">
-                    <h1>Jumlah Sukarelawan Tergabung</h1>
+                    <h1>Jumlah <br>Sukarelawan Tergabung</h1>
                     <a id="donasi" data-count="183">0</a>
                 </div>
             </div>
@@ -87,7 +129,7 @@
                 </div>
         
                 <div class="diagram-text">
-                    <h1>Jumlah Kompos yang Dihasilkan</h1>
+                    <h1>Jumlah <br>Kompos yang Dihasilkan</h1>
                     <a id="donasi" data-count="439">0</a><a> Kg</a>
                 </div>
             </div>
@@ -117,9 +159,19 @@
 
             <div class="progress-bars" id="anchor3">
                 <div class="flexbox-med">
+                    <div class="diagram6">
+                        <h1>Goal Penghasilan Kompos PUSPA 2024</h1>
+                        <span class="bar"><span class="goal-pupuk"></span></span>
+                        <a>312 / 400 Kg</a>
+                    </div>
                 </div>
 
                 <div class="flexbox-med">
+                    <div class="diagram7">
+                        <h1>Goal Donatur Setia PUSPA 2024</h1>
+                        <span class="bar"><span class="goal-donatur"></span></span>
+                        <a>56 / 100</a>
+                    </div>
                 </div>
             </div>
         </div>

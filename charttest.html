@@ -103,6 +103,49 @@
     <div class="diagram5">
         <canvas id="progress1"></canvas>
     </div>
+
+    <style>
+        .diagram6 h1 {
+            font-family: 'Open Sans Hebrew';
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        .diagram6 {
+            width: 500px;
+            margin: 60px auto;
+            color:aliceblue;
+            padding: 20px;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
+
+        .bar {
+            background: #353b48;
+            display: block;
+            height: 20px;
+            border: 1px solid rgba (0,0,0,0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,.1);
+        }
+
+        .bar span {
+            height: 20px;
+            float: left;
+            background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252,103,103,1)100%);
+        }
+
+        .goal-pupuk {
+            width: 70%;
+            animation: html 3s;
+        }
+    </style>
+
+    <div class="diagram6">
+        <h1>Goal Penghasilan Kompos 2024</h1>
+        <span class="bar"><span class="goal-pupuk"></span></span>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
     <script src="chart2.js"></script>
     <script src="chart4.js"></script>
