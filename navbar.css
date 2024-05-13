@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+
+/* navbar css */
+*{
+    font-family: 'Open Sans Hebrew', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #ECE9E4;
+    font-family: 'Open Sans Hebrew', serif;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    box-shadow: 0px 0px 10px #bab09f;
+    z-index: 1000;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    margin-right: 20px;
+    margin-left: 10px;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display:flex;
+    margin-left: 20px;
+}
+
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+    height: 30px;
+}
+
+.navbar li a{
+    color: #575e57;
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 30px;
+}
+
+.navbar li a:hover {
+    color: #499f49;
+    font-weight: 400;
+    text-shadow:#cbffca 0px 0px 10px;
+}
+
+.open-menu, .close-menu {
+    position: absolute;
+    color:#1f351f;
+    cursor: pointer;
+    font-size: 20px;
+    display:none;
+    z-index: 1000;
+}
+
+#check {
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 0;
+    right: 24px;
+}
+
+
+
+/* navbar jadi hamburger menu */
+@media(max-width: 1000px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:100%;
+        padding: 10px;
+        position: fixed;
+        margin-top: -318px;
+        right: 0;
+        z-index: 800;
+        background-color: #ECE9E4;
+        transition: all 0.2s ease-in-out;
+    }
+
+    ul li {
+        padding-bottom: 40px;
+    }
+    
+    .heroimage img {
+        object-fit: cover;
+        width: 100%;
+        height: 800px;
+    }
+
+    .heroimage a {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .open-menu{
+        display: block;
+    }
+
+    #check:checked ~ ul {
+        margin-top: 250px;
+    }
+
+    .bottom-bar {
+        display: block;
+        height:fit-content;
+    }
+    .news {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+
+/* css footer */
+.footer {
+    display: flex;
+    width:100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    padding-left:60px;
+    padding-right:10px;
+    height: 300px;
+    background-color: #ECE9E4;
+    box-shadow: -1px -7px 13px 0px rgba(0,0,0,0.75);
+    z-index: 999;
+}
+
+.footer-logo {
+    margin-top:10px;
+    margin-bottom:10px;
+    display:inline-block;
+    width:360px;
+    color: #335733;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 17px;
+}
+
+.footer-logo img {
+    display: block;
+    width:290px;
+}
+
+.contacts{
+    margin-top: 21px;
+}
+
+.contact1, .contact2 {
+    max-width:100%;
+    display: flex;
+    margin-top: 10px;
+    color: #335733;
+}
+
+#ig-logo, #fb-logo {
+    flex: 1.2;
+    font-size: 30px;
+    margin-right: 10px;
+    color: #335733;
+}
+
+.contact-name {
+    flex: 7;    
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: 500;
+}
+
+.hyperlink-local {
+    flex: 10;
+    height: 30px;
+    padding-right: 40px;
+    margin-left: 40px;
+    margin-top: 28px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hyperlink-local li, .hyperlink-local a {
+    font-size: 18px;
+    list-style: none;
+    color: #1f351f;
+}
+
+.hyperlink-local li a:hover {
+    color: #499f49;
+    font-weight: 400;
+    text-shadow:#cbffca 0px 0px 10px;
+}
+
+@media(max-width: 900px) {
+    .news {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .footer {
+        display:block;
+        font-size: 13px;
+        width: 100%;
+        padding: 50px;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    .footer img {
+        width: 80%;
+    }
+
+    .footer-logo {
+        width: 300px;
+    }
+
+    .contacts a {
+        font-size: 18px;;
+    }
+}

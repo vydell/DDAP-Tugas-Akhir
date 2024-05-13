@@ -2,6 +2,7 @@ const ctx4 = document.getElementById('bar1');
 new Chart(ctx4, {
     type: 'bar',
     data: {
+        axis: 'y',
         labels: ['Desa Begawan', 'Desa Lampau', 'Desa Cikarung    '],
         datasets: [{
             label: '2021', 
@@ -42,6 +43,17 @@ new Chart(ctx4, {
             beginAtZero: true
             }
         },
+        indexAxis: 'y',
+        legend: {
+            display: false
+        },
+        tooltips: {
+            callbacks: {
+               label: function(tooltipItem) {
+                      return tooltipItem.yLabel;
+               }
+            }
+        }
     },
 
   });
