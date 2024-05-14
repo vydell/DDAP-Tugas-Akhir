@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--HEADER-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSPA</title>
+
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/donasiberulang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="Homepage.html">
+                    <img src="/navbar_images/footer-logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+
+            <input type="checkbox" id="check">
+            <ul class="menu">
+                <li><a href="Info-donasi.html">DONASI</a></li>
+                <li><a href="Homepage.html">VOLUNTEER</a></li>
+                <li><a href="Homepage.html">TENTANG KAMI</a></li>
+                <li><a href="Kritiksaran.html">FEEDBACK</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </ul>
+
+            <label for="check" class="open-menu"><i class="fa fa-bars"></i></label>
+        </div>
+    </nav>
+      
+    <div class="interval">
+        <input class="interval-input" type="radio" value="bulanan" name="interval" id="interval-bulanan">
+        <label class ="interval-label" for="interval-bulanan">Bulanan</label>
+        <input class="interval-input" type="radio" value="6-bulan" name="interval" id="interval-6-bulan">
+        <label class ="interval-label" for="interval-6-bulan">Per 6 Bulan</label>
+        <input class="interval-input" type="radio" value="tahunan" name="interval" id="interval-tahunan">
+        <label class ="interval-label" for="interval-tahunan">Tahunan</label>
+    </div>
+
+    <!--FORM DONASI-->
+    <form action="" method="post">
+        <label for="donasi">Pilih Nominal Donasi</label>
+        <div class="value">
+            <div class="row1-money">
+                <span class="money">Rp10.000</span>
+                <span class="money">Rp15.000</span>
+            </div>
+            <div class="row2-money">
+                <span class="money">Rp20.000</span>
+                <span class="money">Rp25.000</span>
+            </div>
+        </div>
+
+        <label for="customDonasi">Masukkan Nominal Lainnya</label>
+        <input type="number" id="customDonasi" name="customDonasi" placeholder="Rp 0" min="10000">
+
+        <div id="horizontal-line"></div>
+
+        <label for="pilihan">Bayar Menggunakan Credit/Debit Card</label>
+        
+        <div class="column">
+            <div class="input-box">
+                <label for="firstName">Nama depan</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="input-box">
+                <label for="lastName">Nama Belakang</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+        </div>
+
+        <label for="address">Alamat</label>
+        <input type="text" id="address" name="address" required>
+
+        <div class="column">
+            <div class="input-box">
+                <label for="city">Kota</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="input-box">
+                <label for="district">Kabupaten</label>
+                <input type="text" id="district" name="district" required>
+            </div>
+
+            <div class="input-box">
+                <label for="postalCode">Kode pos</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+            </div>
+        </div>
+
+        <nav class="kartu">
+            <a href="#">VISA</a>
+            <a href="#">Mastercard</a>
+            <div class="animation start-VISA"></div>
+          </nav>
+
+        <label for="cardNumber">Nomor kartu</label>
+        <input type="text" id="cardNumber" name="cardNumber" required>
+
+        <label for="expiryDate">Tanggal kadaluarsa</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" name="cvv" required>
+
+        <div class="parent">
+            <input type="submit" value="Donasi Sekarang">
+        </div>
+    </form>
+      
+            
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="/navbar_images/logo_puspa.png" alt="logo" class="footer-logo">
+            <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
+        </div>
+
+        <div class="contacts">
+            <div class="contact1">
+                <a href="#" class="fa fa-instagram" id="ig-logo"></a>
+                <div class="contact-name">
+                    <a id="ig-name">bersama.puspa.id</a>
+                </div>
+            </div>
+
+            <div class="contact2">
+                <a href="#" class="fa fa-facebook" id="fb-logo"></a>
+                <div class="contact-name">
+                    <a id="fb-name">Puspa Indonesia</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

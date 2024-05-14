@@ -3,17 +3,6 @@
 
 
 /* navbar css */
-*{
-    font-family: 'Open Sans Hebrew', serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline:none;
-    border:none;
-    text-decoration: none;
-    transition: .2s linear;
-}
-
 .navbar {
     position: sticky;
     top: 0;

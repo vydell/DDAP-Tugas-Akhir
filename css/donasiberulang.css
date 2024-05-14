@@ -1,0 +1,303 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+*{
+    font-family: 'Open Sans Hebrew', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body {
+    background-image: url(../homepage_images/hero_image2.jpg);
+}
+
+  /*NAVIGATION DONASI*/
+.interval{
+    width: 60%;
+    margin: 60px   auto;
+    display: flex;
+    border-radius: 40px;
+    background-color: #ECE9E4;
+}
+
+.interval-input {
+    display: none;
+}
+
+.interval label{
+    flex: 1;
+    height: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #406A40;
+    cursor: pointer;
+}
+
+.interval-label:not(:last-of-type) {
+    border-right: 2px solid #406A40;
+}
+
+.interval-input:checked + .interval-label {
+    background-color: #254225;
+    color:#ECE9E4;
+}
+
+/*form donasi*/
+#donasi {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold ;
+    color: #406A40;
+    
+  }
+  
+#Rp {
+    font-weight: bold;
+    font-size: 34px;
+    color: #DE8B3E;    
+}
+  
+.value{
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+  
+.row1-money, .row2-money {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+  width: 100%;
+}
+
+.money{
+    border: 2px solid #406A40;
+    border-radius: 50px;
+    width: 100%;
+    color: #406A40;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.money:hover{
+  background-color: #406A40;
+  color: white;
+}
+
+form {
+    padding: 5%;
+    width: 60%;
+    margin: 60px auto;
+    background-color:#ECE9E4;
+    border-radius: 12px;
+    font-weight: bold;
+    color:#406A40;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+.input-box{
+    width: 100%;
+    margin-top: 20px;
+    max-width: 100%;
+}
+.input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: black;
+    margin-top: 4px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.column{
+    display:flex;
+    column-gap: 30px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.parent {
+    text-align: center;
+  }
+  
+  input[type="submit"] {
+    background-color: #DE8B3E;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+.kartu{
+    margin:20px auto 0;
+    width: 420px;
+    height: 50px;
+    background: #DE8B3E;
+    border-radius: 8px;
+    font-size: 0 2px 3 px 0 rgba(0,0,0,.1);
+    max-width: 100%;
+    height: auto;
+}
+
+.kartu a{
+    font-size: 15px;
+    text-transform: uppercase;
+    color:black;
+    text-decoration: none;
+    line-height: 50px;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+#horizontal-line{
+    height: 1px;
+    width: 760px;
+    background-color:#254225;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+ 
+@media(max-width: 1000px) {
+    .value{
+        width: 100%;
+        margin-top: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .money{
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 28px;
+        min-width: 200px;
+    }
+
+    #border-nominal {
+        max-width: 100%;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .input-box{
+        width: 100%;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .input-box input{
+        position: relative;
+        height: 40px;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: black;
+        margin-top: 4px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 0 15px;
+    }
+    .column{
+        display:flex;
+        column-gap: 30px;
+    }
+}     
+
+@media(max-width: 600px) {
+    .contents {
+        max-width: 80%;
+    }
+
+    .value{
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .money{
+        min-width: 100%;
+    }
+
+    .donasi{
+        position: relative;
+        margin:-500px auto 0;
+        width: 700px;
+        height: 70px;
+        background: #ECE9E4;
+        border-radius: 8px;
+        font-size: 0 2px 3 px 0 rgba(0,0,0,.1);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .donasi a{
+        font-size: 15px;
+        text-transform: uppercase;
+        color:#575e57;
+        text-decoration: none;
+        line-height: 50px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .input-box{
+        width: 100%;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .input-box input{
+        position: relative;
+        height: 40px;
+        width: 100%;
+        outline: none;
+        font-size: 1rem;
+        color: black;
+        margin-top: 4px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 0 15px;
+    }
+
+    .column{
+        display:flex;
+        column-gap: 30px;
+    }
+}

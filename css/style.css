@@ -256,9 +256,17 @@ body {
     font-size: 28px;
 }
 
-.btn-stats, .btn-stats a:active, .btn-stats a:visited {
-    margin-top: 60px;
-    width: 170px;
+.btns-sidebar {
+    margin-top: 30px;
+}
+
+.btn-stats {
+    margin-bottom: 20px;
+}
+
+.btn-stats, .btn-stats a:active, .btn-stats a:visited,
+.btn-donasi, .btn-donasi a:active, .btn-donasi a:visited{
+    width: 190px;
     height: 50px;
     background-color: #f0eeea;
     border-radius: 30px;
@@ -268,10 +276,42 @@ body {
     font-size: 16px;
 }
 
-.btn-stats:hover{
+.btn-stats:hover, .btn-donasi:hover{
+    cursor: pointer;
     background-color: #e0d1b2;
+    color: #bb5b1f;
 }
 
-.btn-stats a:hover {
-    color: #bb5b1f;
+@media(max-width: 1000px) {
+    .heroimage img {
+        object-fit: cover;
+        width: 100%;
+        height: 800px;
+    }
+
+    .heroimage a {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .open-menu{
+        display: block;
+    }
+
+    #check:checked ~ ul {
+        margin-top: 250px;
+    }
+
+    .bottom-bar {
+        display: block;
+        height:fit-content;
+    }
+    .news {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: block;
+    }
 }

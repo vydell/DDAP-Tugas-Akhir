@@ -10,39 +10,14 @@
     border:none;
     text-decoration: none;
     transition: .2s linear;
-    background-color: #ECE9E4;
-}
-
-.open-menu, .close-menu {
-  position: absolute;
-  color:#1f351f;
-  cursor: pointer;
-  font-size: 20px;
-  display:none;
-  z-index: 1000;
-}
-
-#check {
-  display: none;
-}
-
-.open-menu {
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-}
-
-.close-menu {
-  top: 0;
-  right: 24px;
 }
 
 body {
-    
-    background-image: url(homepage_images/hero_image2.jpg);
+    background-image: url(../homepage_images/hero_image2.jpg);
 }
 
 .contents {
+    background-color: #fff9ee;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -53,6 +28,7 @@ body {
     border-radius: 20px;
     box-shadow: 0px 0px 10px #9fbaa5;
 }
+
 .Pilih-Metode,
 .Identitas,
 .Harapan,
@@ -63,16 +39,17 @@ body {
   margin-bottom: 60px;
 }
 
-
 .PUSPA img {
   object-fit: fill;
   border-radius: 3px;
-  max-width: 100%;
+  width: 100%;
+  margin-left: 0px;
+  margin-right:0px;
 }
 .PUSPA h1{
   color: #406A40;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 30px;
   
 }
 
@@ -84,8 +61,9 @@ label {
 input {
     margin-top: 10px;
     width: 100%;
-    padding: 10px;
+    padding: 15px 20px;
     background-color: #c9c7c2da;
+    border:#DE8B3E;
     border-radius: 10px;
     font-size: 18px;
     color:#2D3E2E;
@@ -119,14 +97,17 @@ input {
     margin-bottom: 60px;
 }
 
-.money{
+.row1-money, .row2-money {
+  display: flex;
+  gap: 30px;
   flex: 1;
+  width: 100%;
+}
+
+.money{
     border: 2px solid #406A40;
     border-radius: 50px;
-
     width: 100%;
-    min-width: 140px;
-    max-width: 25%;
     color: #406A40;
     font-weight: 700;
     font-size: 20px;
@@ -165,6 +146,7 @@ input {
   user-select: none; 
   margin-top: 8px;
 }
+
 .anon input {
     display: inline;
     width: 15px;
@@ -185,7 +167,6 @@ input {
   border-radius: 10px;
   padding: 15px;
 }
-
 
 .lanjut-bayar{
     display: flex;
@@ -216,18 +197,10 @@ input {
 }
 
 
-@media(max-width: 1000px) {
+@media(max-width: 1100px) {
   .contents {
     padding: 40px;
-    width: 90%;
-  }
-  .open-menu{
-      display: block;
-  }
-
-  #check:checked ~ ul {
-      margin-top: 250px;
-      opacity: 1;
+    min-width: 70%;
   }
 
   .PUSPA h1 {
@@ -241,14 +214,22 @@ input {
       flex-wrap: wrap;
       gap: 10px;
       margin-bottom: 20px;
+      
+  }
+
+  .row1-money {
+    margin-bottom: 20px;
+  }
+
+  .row1-money, .row2-money {
+    min-width: 100%;
+    display: flex;
   }
 
   .money{
-    width: 100%;
+      width: 100%;
       padding: 10px;
-      margin-bottom: 10px;
       border-radius: 28px;
-      min-width: 200px;
   }
 
   #border-nominal {
@@ -266,15 +247,21 @@ input {
       padding: 30px;
   }
 
+  .row1-money, .row2-money {
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+
   .value{
-      justify-content: space-between;
-      width: 100%;
-      display: flex;
-      margin-bottom: 20px;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   .money{
-      min-width: 100%;
+    min-width: 200px;
       font-size: 15px;
   }
 }
