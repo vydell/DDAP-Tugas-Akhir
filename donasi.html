@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head> <!--HEADER-->
- <link rel="stylesheet" href="/css/navbar.css">
- <link rel="stylesheet" href="/css/donasi.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/donasi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -21,7 +20,7 @@
                 <li><a href="Info-donasi.html">DONASI</a></li>
                 <li><a href="Homepage.html">VOLUNTEER</a></li>
                 <li><a href="Homepage.html">TENTANG KAMI</a></li>
-                <li><a href="Kritiksaran.html">FEEDBACK</a></li>
+                <li><a href="FormKritikSaran.html">FEEDBACK</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
 
@@ -32,23 +31,56 @@
     <div class="contents">
         <div class="PUSPA">
             <h1>PUSPA (Program Unggulan Sisa Pangan menjadi Anugerah)</h1>
-            <img src = '/donasi_images/padi3.png'> 
             <p id = "donasi">Nominal Donasi : </p>
-            <p id = "Rp">Rp.0</p>
+            <p id = "Rp">Rp. 0</p>
             <div id="border-nominal" style="border-top: 3px solid #406A40; width: 300px; margin-top: 0.7em; padding-top: 2em;"></div>
         
             <label for="donasi">Pilih Nominal Donasi</label>
             <div class="value">
                 <div class="row1-money">
-                    <span class="money">Rp10.000</span>
-                    <span class="money">Rp15.000</span>
+                    <input class="input-uang" type="radio" value="uang1" name="uang" id="uang1">
+                    <label class="label-uang" for="uang1">Rp 10.000</label>
+                    <input class="input-uang" type="radio" value="uang2" name="uang" id="uang2">
+                    <label class="label-uang" for="uang2">Rp 25.000</label>
                 </div>
                 <div class="row2-money">
-                    <span class="money">Rp20.000</span>
-                    <span class="money">Rp25.000</span>
+                    <input class="input-uang" type="radio" value="uang3" name="uang" id="uang3">
+                    <label class="label-uang" for="uang3">Rp 50.000</label>
+                    <input class="input-uang" type="radio" value="uang4" name="uang" id="uang4">
+                    <label class="label-uang" for="uang4">Rp 100.000</label>
                 </div>
             </div>
+
+            <script>
+                let radioBtn =  document.querySelectorAll('input[name="uang"]');
+                let nominal = document.getElementById('Rp');
         
+                let findSelected = () => {
+                    let selected = document.querySelector('input[name="uang"]:checked').value;
+                    if (selected == "uang1") {
+                        nominal.textContent = "Rp. 10.000";
+                    } else if (selected == "uang2") {
+                        nominal.textContent = "Rp. 25.000";
+                    } else if (selected == "uang3") {
+                        nominal.textContent = "Rp. 50.000";
+                    } else if (selected == "uang4") {
+                        nominal.textContent = "Rp. 100.000";
+                    }
+                }
+        
+                radioBtn.forEach(btn => {
+                    btn.addEventListener("change", findSelected);
+                });
+        
+                findSelected(); 
+
+                function showPopup() {
+                    let popup = document.getElementById("popup-confirm");
+                    popup.style.visibility = "visible";
+                }
+
+            </script>
+
             <label for="nominal-lain">Nominal lainnya</label><br>
             <input type="number" id="nominal-lain" name="nominal-lain"><br>
         
@@ -61,7 +93,7 @@
             <input type="text" id="payment" name="payment"><br>
         </div>
         
-        <div class = "space"> </div>
+        <!-- <div class = "space"> </div>
         
         <div class = "Identitas">
             <label for="name">Nama</label><br>
@@ -70,15 +102,8 @@
             <div class="email">
                 <label for="email">Email atau nomor ponsel</label><br>
                 <input type="text" id="email" name="email"><br>
-            </div>
-
-            <div class="anon">
-                <label id="checkbox-anon" class="fa fa-check-circle-o" aria-hidden="true"></label>
-                <label id="checkbox-anon-checked" class="fa fa-check-circle" aria-hidden="true"></label>
-                <input type="checkbox" id="anonymous" name="anonymous">
-                <label id="checbox-text" for="anonymous">Sembunyikan nama saya (donasi sebagai anonim)</label><br>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
      
         <div class = "space"> </div>
         
@@ -89,10 +114,15 @@
         
         <div class = "space"> </div>
         
-        <div class = "lanjut-bayar"> 
-        <input type="submit" value="Lanjut pembayaran">
+        <div class="anon">
+            <input type="checkbox" id="anonymous" name="anonymous">
+            <label id="checbox-text" for="anonymous">Sembunyikan nama saya (donasi sebagai anonim)</label><br>
         </div>
-     
+
+        <div class = "lanjut-bayar"> 
+        <input onclick="showPopup()" type="submit" value="Lanjut pembayaran">
+        </div>
+        <div class="bg-image" id="bg-image2"></div>
     </div>
 
 <div class="footer">
@@ -118,6 +148,17 @@
           </div>
       </div>
   </div>
+</div>
+
+<div class="popup-confirm" id="popup-confirm">
+    <img class="tick_img" src="/donasi_images/tick.png" width="80px" height="80px">
+    <div class="text-popup">
+        <h2>Terima kasih!</h2>
+        <a>Donasi anda telah kami terima. Anda bisa cek e-mail anda untuk melihat detail donasi anda.</a>
+    </div>
+    <button class="btn-kembali">
+        <a href="Info-donasi.html">Kembali</a>
+    </button>
 </div>
 
 </body>

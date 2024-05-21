@@ -13,56 +13,86 @@
 }
 
 body {
-    background-image: url(../homepage_images/hero_image2.jpg);
+    background-image: url(../donasi_images/donasi7.png);
+    background-repeat: no-repeat;
+    background-position: -250px -80px;
+    background-color: #ffffff;
 }
 
-  /*NAVIGATION DONASI*/
-.interval{
+  /*INTERVAL DONASI*/
+  .pilihan {
     width: 60%;
-    margin: 60px   auto;
     display: flex;
-    border-radius: 40px;
-    background-color: #ECE9E4;
+    margin: 60px auto;
+    justify-content: center;
 }
 
-.interval-input {
+.radio-menu, .radio-kartu {
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(135, 128, 125, 0.25);
+}
+
+.input-radio {
     display: none;
 }
 
-.interval label{
-    flex: 1;
-    height: 100%;
-    padding: 15px 0;
+.label-radio {
+    height: 100px;
+    padding-top: 14px;
     text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #406A40;
+    width: 100%;
+    font-size: 18px;
+    background: #ffffff;
+    color: rgb(130, 56, 21);
     cursor: pointer;
+    transition: background 0.1s;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.interval-label:not(:last-of-type) {
-    border-right: 2px solid #406A40;
+.label-radio:hover {
+    background-color:  rgb(255, 222, 179);
+    color: rgb(130, 56, 21);
 }
 
-.interval-input:checked + .interval-label {
-    background-color: #254225;
-    color:#ECE9E4;
+.label-radio:not(:last-of-type) {
+    border-right: 1px solid rgb(130, 56, 21);
+}
+
+.input-radio:checked + .label-radio {   
+    color:rgb(255, 251, 247);
+    background: rgb(235, 133, 0);
 }
 
 /*form donasi*/
+form {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    padding:  50px 100px;
+    width: 60%;
+    margin: 60px auto;
+    background-color:#ffffff;
+    border-radius: 12px;
+    font-weight: bold;
+    color:#406A40;
+}
+
 #donasi {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold ;
     color: #406A40;
     
-  }
+}
   
 #Rp {
     font-weight: bold;
     font-size: 34px;
-    color: #DE8B3E;    
+    color: #DE8B3E;
+    margin-bottom: 50px;
 }
   
 .value{
@@ -74,59 +104,77 @@ body {
     margin-bottom: 50px;
 }
   
+#nominal-lain {
+    margin-bottom: 60px;
+}
+  
 .row1-money, .row2-money {
-  display: flex;
-  gap: 30px;
-  flex: 1;
-  width: 100%;
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    width: 100%;
+}
+  
+.input-uang {
+    display: none;
 }
 
-.money{
+.label-uang {
+    cursor: pointer;
     border: 2px solid #406A40;
     border-radius: 50px;
     width: 100%;
+    min-width: 140px;
     color: #406A40;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
     padding: 15px 20px;
     text-align: center;
 }
 
-.money:hover{
-  background-color: #406A40;
-  color: white;
-}
+  .input-uang:checked + .label-uang {
+    background-color:  rgb(235, 133, 0);
+    border: 2px solid rgb(171, 60, 0);
+    color: white;
+  }
+  
+  .label-uang:hover{
+    background-color:  rgb(255, 222, 179);
+    border: 2px solid rgb(171, 60, 0);
+    color: rgb(130, 56, 21);
+  }
 
-form {
-    padding: 5%;
-    width: 60%;
-    margin: 60px auto;
-    background-color:#ECE9E4;
-    border-radius: 12px;
-    font-weight: bold;
-    color:#406A40;
-}
 label {
     display: block;
-    margin-bottom: 10px;
 }
+
 .input-box{
     width: 100%;
     margin-top: 20px;
     max-width: 100%;
 }
+
+#customDonasi input::placeholder {
+    overflow: visible;  
+    font: 16px;
+}
+
 .input-box input{
     height: 40px;
     width: 100%;
     outline: none;
-    font-size: 1rem;
+    font-size: 16px;
     color: black;
     margin-top: 4px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    border-radius: 10px;
     padding: 0 15px;
 }
+
+.input-box input:focus{
+    border: 2px solid #406A40;
+}
+
 .column{
     display:flex;
     column-gap: 30px;
@@ -137,31 +185,32 @@ input[type="number"],
 select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #a3a3a3;
+    border-radius: 10px;
 }
 
 
 .parent {
+    margin-top: 50px;
     text-align: center;
   }
   
-  input[type="submit"] {
-    background-color: #DE8B3E;
+input[type="submit"] {
+    background-color:rgb(235, 133, 0);
+    font-size: 16px;
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     display: inline-block;
-  }
+}
 
 .kartu{
     margin:20px auto 0;
-    width: 420px;
+    width: 50%;
+    min-width: 250px;
     height: 50px;
-    background: #DE8B3E;
     border-radius: 8px;
     font-size: 0 2px 3 px 0 rgba(0,0,0,.1);
     max-width: 100%;
@@ -180,6 +229,15 @@ select {
     
 }
 
+.detail-kartu {
+    display: flex;
+    gap: 60px;
+}
+
+.tgl-exp, .cvv {
+    flex: 1;
+}
+
 #horizontal-line{
     height: 1px;
     width: 760px;
@@ -189,6 +247,10 @@ select {
 }
  
 @media(max-width: 1000px) {
+    form {
+        width: 80%;
+    }
+
     .value{
         width: 100%;
         margin-top: 2%;
@@ -198,7 +260,7 @@ select {
         margin-bottom: 20px;
     }
 
-    .money{
+    .label-uang{
         padding: 10px;
         margin-bottom: 10px;
         border-radius: 28px;
@@ -239,7 +301,7 @@ select {
 
 @media(max-width: 600px) {
     .contents {
-        max-width: 80%;
+        min-width: 90%;
     }
 
     .value{

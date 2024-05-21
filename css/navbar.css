@@ -8,6 +8,7 @@
     top: 0;
     background: #ECE9E4;
     font-family: 'Open Sans Hebrew', serif;
+    height: 65px;
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 10px;
@@ -23,7 +24,7 @@
 }
 
 .logo {
-    width: 150px;
+    width: 100px;
     margin-right: 20px;
     margin-left: 10px;
     z-index: 1000;
@@ -81,13 +82,15 @@
 
 
 /* navbar jadi hamburger menu */
-@media(max-width: 1000px) {
+@media(max-width: 800px) {
     .navbar {
-        height: 60px;
+        height: 80px;
+        z-index: 1000;
     }
 
     .logo {
-        width: 100px;
+        width: 130px;
+        z-index: 1000;
     }
 
     ul {
@@ -99,13 +102,13 @@
         position: fixed;
         margin-top: -318px;
         right: 0;
-        z-index: 800;
         background-color: #ECE9E4;
         transition: all 0.2s ease-in-out;
     }
 
     ul li {
         padding-bottom: 40px;
+        z-index: -1;
     }
     
     .heroimage img {
@@ -121,6 +124,7 @@
 
     .open-menu{
         display: block;
+        font-size: 24px;
     }
 
     #check:checked ~ ul {
@@ -153,7 +157,7 @@
     padding-right:10px;
     height: 300px;
     background-color: #ECE9E4;
-    box-shadow: -1px -7px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px -1px 10px 0px rgba(110, 101, 95, 0.34);
     z-index: 999;
 }
 
@@ -226,6 +230,7 @@
         padding-left: 0px;
         padding-right: 0px;
     }
+
     .footer {
         display:block;
         font-size: 13px;

@@ -23,7 +23,7 @@
                 <li><a href="Info-donasi.html">DONASI</a></li>
                 <li><a href="Homepage.html">VOLUNTEER</a></li>
                 <li><a href="Homepage.html">TENTANG KAMI</a></li>
-                <li><a href="Kritiksaran.html">FEEDBACK</a></li>
+                <li><a href="FormKritikSaran.html">FEEDBACK</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
 
@@ -31,28 +31,61 @@
         </div>
     </nav>
       
-    <div class="interval">
-        <input class="interval-input" type="radio" value="bulanan" name="interval" id="interval-bulanan">
-        <label class ="interval-label" for="interval-bulanan">Bulanan</label>
-        <input class="interval-input" type="radio" value="6-bulan" name="interval" id="interval-6-bulan">
-        <label class ="interval-label" for="interval-6-bulan">Per 6 Bulan</label>
-        <input class="interval-input" type="radio" value="tahunan" name="interval" id="interval-tahunan">
-        <label class ="interval-label" for="interval-tahunan">Tahunan</label>
+    <div class="pilihan">
+        <div class="radio-menu">
+            <input class="input-radio" type="radio" value="role1" name="role" id="role1">
+            <label class="label-radio" for="role1">Bulanan</label>
+            <input class="input-radio" type="radio" value="role1" name="role" id="role2">
+            <label class="label-radio" for="role2">6 Bulan</label>
+            <input class="input-radio" type="radio" value="role1" name="role" id="role3">
+            <label class="label-radio" for="role3">Tahunan</label>
+        </div>
     </div>
 
     <!--FORM DONASI-->
     <form action="" method="post">
+        <p id = "donasi">Nominal Donasi : </p>
+        <p id = "Rp">Rp. 0</p>
+
         <label for="donasi">Pilih Nominal Donasi</label>
         <div class="value">
             <div class="row1-money">
-                <span class="money">Rp10.000</span>
-                <span class="money">Rp15.000</span>
+                <input class="input-uang" type="radio" value="uang1" name="uang" id="uang1">
+                <label class="label-uang" for="uang1">Rp 10.000</label>
+                <input class="input-uang" type="radio" value="uang2" name="uang" id="uang2">
+                <label class="label-uang" for="uang2">Rp 25.000</label>
             </div>
             <div class="row2-money">
-                <span class="money">Rp20.000</span>
-                <span class="money">Rp25.000</span>
+                <input class="input-uang" type="radio" value="uang3" name="uang" id="uang3">
+                <label class="label-uang" for="uang3">Rp 50.000</label>
+                <input class="input-uang" type="radio" value="uang4" name="uang" id="uang4">
+                <label class="label-uang" for="uang4">Rp 100.000</label>
             </div>
         </div>
+
+        <script>
+            let radioBtn =  document.querySelectorAll('input[name="uang"]');
+            let nominal = document.getElementById('Rp');
+    
+            let findSelected = () => {
+                let selected = document.querySelector('input[name="uang"]:checked').value;
+                if (selected == "uang1") {
+                    nominal.textContent = "Rp. 10.000";
+                } else if (selected == "uang2") {
+                    nominal.textContent = "Rp. 25.000";
+                } else if (selected == "uang3") {
+                    nominal.textContent = "Rp. 50.000";
+                } else if (selected == "uang4") {
+                    nominal.textContent = "Rp. 100.000";
+                }
+            }
+    
+            radioBtn.forEach(btn => {
+                btn.addEventListener("change", findSelected);
+            });
+    
+            findSelected(); 
+        </script>
 
         <label for="customDonasi">Masukkan Nominal Lainnya</label>
         <input type="number" id="customDonasi" name="customDonasi" placeholder="Rp 0" min="10000">
@@ -73,8 +106,10 @@
             </div>
         </div>
 
-        <label for="address">Alamat</label>
-        <input type="text" id="address" name="address" required>
+        <div class="input-box">
+            <label for="address">Alamat</label>
+            <input class="input-box" type="text" id="address" name="address" required>
+        </div>
 
         <div class="column">
             <div class="input-box">
@@ -93,20 +128,31 @@
             </div>
         </div>
 
-        <nav class="kartu">
-            <a href="#">VISA</a>
-            <a href="#">Mastercard</a>
-            <div class="animation start-VISA"></div>
-          </nav>
+        <div class="kartu">
+            <div class="radio-kartu">
+                <input class="input-radio" type="radio" value="visa" name="kartu" id="visa">
+                <label class="label-radio" for="visa">Visa</label>
+                <input class="input-radio" type="radio" value="mastercard" name="kartu" id="mastercard">
+                <label class="label-radio" for="mastercard">Mastercard</label>
+            </div>
+        </div>
 
-        <label for="cardNumber">Nomor kartu</label>
-        <input type="text" id="cardNumber" name="cardNumber" required>
-
-        <label for="expiryDate">Tanggal kadaluarsa</label>
-        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
-
-        <label for="cvv">CVV</label>
-        <input type="text" id="cvv" name="cvv" required>
+        <div class="input-box">
+            <label for="cardNumber">Nomor kartu</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+    
+            <div class="detail-kartu">
+                <div class="tgl-exp">
+                    <label for="expiryDate">Tanggal kadaluarsa</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                </div>
+                
+                <div class="cvv">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+            </div>
+        </div>
 
         <div class="parent">
             <input type="submit" value="Donasi Sekarang">
