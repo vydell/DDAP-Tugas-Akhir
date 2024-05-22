@@ -90,6 +90,18 @@ html { scroll-behavior: smooth; }
     color: #406A40;
 }
 
+#deskripsi-donasi {
+    scroll-margin-top: 70px;
+}
+
+#btn-scroll-donasi {
+    display: block;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
 .donasi-illus {
     display: flex;
     width: fit-content;
@@ -154,7 +166,7 @@ html { scroll-behavior: smooth; }
     width: 60%;
 }
 
-@media(max-width: 950px) {
+@media(max-width: 1080px) {
     .hero-text {
         width: 80%;
     }

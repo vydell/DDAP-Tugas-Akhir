@@ -30,8 +30,9 @@
             <label for="check" class="open-menu"><i class="fa fa-bars"></i></label>
         </div>
     </nav>
-      
+    
     <div class="pilihan">
+        <a id="interval-text">Pilih Interval Donasi: </a>
         <div class="radio-menu">
             <input class="input-radio" type="radio" value="role1" name="role" id="role1">
             <label class="label-radio" for="role1">Bulanan</label>
@@ -43,10 +44,11 @@
     </div>
 
     <!--FORM DONASI-->
-    <form action="" method="post">
+    <form class="contents" action="" method="post">
         <p id = "donasi">Nominal Donasi : </p>
         <p id = "Rp">Rp. 0</p>
 
+        <!-- NOMINAL DONASI -->
         <label for="donasi">Pilih Nominal Donasi</label>
         <div class="value">
             <div class="row1-money">
@@ -87,11 +89,15 @@
             findSelected(); 
         </script>
 
-        <label for="customDonasi">Masukkan Nominal Lainnya</label>
-        <input type="number" id="customDonasi" name="customDonasi" placeholder="Rp 0" min="10000">
-
+        <!--DONASI CUSTOM-->
+        <div class="donasi-custom">
+            <label for="customDonasi">Masukkan Nominal Lainnya</label>
+            <input type="number" id="customDonasi" name="customDonasi" placeholder="Rp 0" min="10000">
+        </div>
+        
         <div id="horizontal-line"></div>
 
+        <!--INPUT FIELDS-->
         <label for="pilihan">Bayar Menggunakan Credit/Debit Card</label>
         
         <div class="column">

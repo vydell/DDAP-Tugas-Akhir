@@ -2,36 +2,122 @@
 @import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
 
 *{
-    font-family: 'Open Sans Hebrew', serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline:none;
-    border:none;
-    text-decoration: none;
-    transition: .2s linear;
+  font-family: 'Open Sans Hebrew', serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline:none;
+  border:none;
+  text-decoration: none;
+  transition: .2s linear;
 }
 
 body {
-    background-image: url(../donasi_images/donasi7.png);
-    background-repeat: no-repeat;
-    background-position: -250px -80px;
-    background-color: #ffffff;
+  background-image: url(../donasi_images/donasi7.png);
+  background-repeat: no-repeat;
+  background-position: -250px -80px;
+  background-color: #ffffff;
 }
+/* 
+#illus-1 {
+  z-index: -1;
+  position: fixed;
+  top: 2%;
+  left: -5%;
+  transform: translate(-50%, -50%);
+} */
 
 .contents {
-    background-color: #ffffff;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:60px;
-    margin-bottom: 60px;
-    padding: 60px 100px;
-    max-width: 58%;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px #baa99f;
+  background-color: #ffffff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:60px;
+  margin-bottom: 60px;
+  padding: 40px 100px;
+  max-width: 58%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px #baa99f;
 }
 
+/* progress bar */
+.diagram7 {
+  user-select: none; 
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 40px;
+}
+
+.diagram7 h1 {
+  font-family: 'Open Sans Hebrew', sans-serif;
+  font-size: 25px;
+  font-weight: bolder;
+  color: #406A40;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.diagram7 a {
+  margin-top: 10px;
+  font-family: 'Open Sans Hebrew', sans-serif;
+  font-size: 15px;
+  color: #818181;
+  text-align: center;
+}
+
+.form {
+  border-radius: 30px;
+  width: 100%;
+}
+
+.bar {
+  background: #37393f;
+  display: block;
+  height: 30px;
+  border: 1px solid rgba (0,0,0,0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px -0.5px 5px rgba(186, 144, 144, 0.393), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,.1);
+}
+
+.bar span {
+  height: 30px;
+  float: left;
+  background: linear-gradient(135deg,  rgba(32,140,101,1)0%, rgba(118,165,117,1)100%);
+}
+
+.goal-donatur {
+  width: 52%;
+  animation: goal-donatur 3s;
+}
+
+/* box untuk form */
+.form label, .anon label {
+  color: #406A40;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form input:focus {
+  border: 2px solid #406A40;
+  transition: none;
+}
+
+.form input {
+  margin-top: 10px;
+  width: 60%;
+  min-width: 300px;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 18px;
+  color:#2D3E2E;
+  background-color: #e8e8e8;
+}
+
+/* input field */
 .Pilih-Metode,
 .Identitas,
 .Harapan,
@@ -42,40 +128,12 @@ body {
   margin-bottom: 20px;
 }
 
-.PUSPA h1{
-  color: #406A40;
-  margin-bottom: 30px;
-  font-size: 30px;
-}
-
-label {
-    color: #406A40;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-input:focus {
-  border: 2px solid #406A40;
-  transition: none;
-}
-
-input {
-  margin-top: 10px;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #cccccc00;
-  border-radius: 10px;
-    font-size: 18px;
-    color:#2D3E2E;
-}
-
+/* pilih nominal donasi */
 #donasi {
   margin-top: 20px;
   font-size: 20px;
   font-weight: bold ;
   color: #406A40;
-  
 }
 
 #Rp {
@@ -90,11 +148,11 @@ input {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #nominal-lain {
-    margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .row1-money, .row2-money {
@@ -134,30 +192,10 @@ input {
   color: rgb(130, 56, 21);
 }
 
+/* text field */
 .Pilih-Metode {
   color: #2D3E2E;
   margin-top: 40px;
-}
-
-
-.anon {
-    display: flex;
-    justify-content: right;
-    width: 100%;
-}
-
-.anon label {
-  user-select: none; 
-  margin-top: 5px;
-  font-weight: 400;
-}
-
-.anon input {
-    display: inline;
-    width: 15px;
-    justify-content: center;
-    margin-right:10px;
-    margin-bottom: 10px;
 }
 
 .Harapan {
@@ -168,8 +206,11 @@ input {
   margin-top: 15px;
   width: 100%;
   height: 100px;
-  background-color:#ffffffda;
+  border: 1px solid #cccccc;
   border-radius: 10px;
+  font-size: 18px;
+  color:#2D3E2E;
+  background-color: #e8e8e8;
   resize: none;
   padding: 15px;
 }
@@ -179,35 +220,54 @@ input {
   transition: none;
 }
 
+/* checklist donasi secara anonim */
+.anon {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.anon label {
+  user-select: none; 
+  font-weight: 400;
+}
+
+.anon input {
+  max-width: 15px;
+  justify-content: center;
+  margin-right:10px;
+  margin-top: 2px;
+}
+
 .lanjut-bayar{
-    display: flex;
-    -ms-flex-align: end;
-    max-width: 100%;
-    height: 60px;
-    justify-content: right;
+  display: flex;
+  -ms-flex-align: end;
+  max-width: 100%;
+  height: 60px;
+  justify-content: right;
 }
 
 .lanjut-bayar input[type="submit"] {
-    background-color: #f19239;;
-    color: #fff;
-    width: 200px;
-    height: 50px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: #f19239;;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .lanjut-bayar input[type="submit"]:hover {
-    background-color: #e89b53;;
-    cursor: pointer;
+  background-color: #e89b53;;
+  cursor: pointer;
 }
 
 .space {
   max-width: 100%;
-  height: 2px;
+  height: 1px;
   background-color: #7F9F7F;
 }
-
 
 /* popup window */
 .popup-confirm {
@@ -226,9 +286,26 @@ input {
   border-radius: 30px;
   box-shadow: -1px 0px 5px 0px rgba(153, 153, 153, 0.738);
   padding: 50px;
+  z-index: 1001;
 }
 
+#overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3b3b3b96;
+  z-index: 1000;
+}
+
+.text-popup {
+  height:fit-content;
+  margin-bottom: 20px;
+}
 .text-popup h2 {
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -253,40 +330,12 @@ input {
   animation: popup 1s;
 }
 
-@keyframes popup {
-  0%{
-      transform: scale(1);
-  }
-  50%{
-      transform: scale(1.4);
-  }
-  60%{
-      transform: scale(1.1);
-  }
-  70%{
-      transform: scale(1.2);
-  }
-  80%{
-      transform: scale(1);
-  }
-  90%{
-      transform: scale(1.1);
-  }
-  100%{
-      transform: scale(1);
-  }
-}
-
 
 @media screen and (max-width: 1100px) {
   .contents {
     margin-top: 30px;
     padding: 100px;
     min-width: 80%;
-  }
-
-  .PUSPA h1 {
-      font-size: 24px;  
   }
 
   .value{
@@ -309,25 +358,25 @@ input {
   }
 
   .money{
-      width: 100%;
-      padding: 10px;
-      border-radius: 28px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 28px;
   }
 
   #border-nominal {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   label {
-      font-size: 14px;
+    font-size: 14px;
   }
 }     
 
-@media screen and (max-width: 600px) {
-.contents {
-    min-width: 90%;
-    padding: 30px;
-}
+@media screen and (max-width: 500px) {
+  .contents {
+      min-width: 90%;
+      padding: 30px;
+  }
 
   .row1-money, .row2-money {
     flex-wrap: wrap;

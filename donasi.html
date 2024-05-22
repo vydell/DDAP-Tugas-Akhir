@@ -28,12 +28,19 @@
         </div>
     </nav>
 
+    <!-- <img id="illus-1" src="/donasi_images/donasi7.png"> -->
     <div class="contents">
-        <div class="PUSPA">
-            <h1>PUSPA (Program Unggulan Sisa Pangan menjadi Anugerah)</h1>
+        <div class="diagram7">
+            <h1>Donasi Terkumpul 2024</h1>
+            <span class="bar"><span class="goal-donatur"></span></span>
+            <a>Rp. 2.576.000 / Rp 5.000.000 </a>
+        </div>
+
+
+        <div class="form">
             <p id = "donasi">Nominal Donasi : </p>
             <p id = "Rp">Rp. 0</p>
-            <div id="border-nominal" style="border-top: 3px solid #406A40; width: 300px; margin-top: 0.7em; padding-top: 2em;"></div>
+            <div id="border-nominal" style="border-top: 2px solid #406A40; width: 300px; margin-top: 0.2em; padding-top: 2em;"></div>
         
             <label for="donasi">Pilih Nominal Donasi</label>
             <div class="value">
@@ -73,93 +80,97 @@
                 });
         
                 findSelected(); 
-
-                function showPopup() {
-                    let popup = document.getElementById("popup-confirm");
-                    popup.style.visibility = "visible";
-                }
-
             </script>
 
             <label for="nominal-lain">Nominal lainnya</label><br>
             <input type="number" id="nominal-lain" name="nominal-lain"><br>
         
-        </div>
-     
-        <div class = "space"> </div>
+            <div class = "space"> </div>
+            
+            <div class = "Pilih-Metode">
+                <label for="payment">Pilih metode pembayaran</label><br>
+                <input type="text" id="payment" name="payment"><br>
+            </div>
+            
+            <!-- <div class = "space"> </div>
+            
+            <div class = "Identitas">
+                <label for="name">Nama</label><br>
+                <input type="text" id="name" name="name"><br>
+            
+                <div class="email">
+                    <label for="email">Email atau nomor ponsel</label><br>
+                    <input type="text" id="email" name="email"><br>
+                </div> -->
+            <!-- </div> -->
         
-        <div class = "Pilih-Metode">
-            <label for="payment">Pilih metode pembayaran</label><br>
-            <input type="text" id="payment" name="payment"><br>
-        </div>
-        
-        <!-- <div class = "space"> </div>
-        
-        <div class = "Identitas">
-            <label for="name">Nama</label><br>
-            <input type="text" id="name" name="name"><br>
-        
-            <div class="email">
-                <label for="email">Email atau nomor ponsel</label><br>
-                <input type="text" id="email" name="email"><br>
-            </div> -->
-        <!-- </div> -->
-     
-        <div class = "space"> </div>
-        
-        <div class = "Harapan">
-        <label for="hope">Harapan donasi (Opsional)</label><br>
-                <textarea id="hope" name="hope"></textarea><br>
-        </div>
-        
-        <div class = "space"> </div>
-        
+            <div class = "space"> </div>
+            
+            <div class = "Harapan">
+            <label for="hope">Harapan donasi (Opsional)</label><br>
+                    <textarea id="hope" name="hope"></textarea><br>
+            </div>
+            
+            <div class = "space"> </div>
+        </div>     
+
+        <!-- checkbox untuk menjadikan donasi anonim -->
         <div class="anon">
             <input type="checkbox" id="anonymous" name="anonymous">
             <label id="checbox-text" for="anonymous">Sembunyikan nama saya (donasi sebagai anonim)</label><br>
         </div>
 
+        <!-- button untuk lanjut bayar -->
         <div class = "lanjut-bayar"> 
-        <input onclick="showPopup()" type="submit" value="Lanjut pembayaran">
+            <input onclick="showPopup()" type="submit" value="Lanjut pembayaran">
         </div>
-        <div class="bg-image" id="bg-image2"></div>
     </div>
 
-<div class="footer">
-  <div class="footer-logo">
-      <img src="/navbar_images/logo_puspa.png" alt="logo" class="footer-logo">
-      <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
-  </div>
-
-
-  <div class="contacts">
-      <div class="contact1">
-          <a href="#" class="fa fa-instagram" id="ig-logo"></a>
-          <div class="contact-name">
-              <a id="ig-name">bersama.puspa.id</a>
-          </div>
-      </div>
-
-
-      <div class="contact2">
-          <a href="#" class="fa fa-facebook" id="fb-logo"></a>
-          <div class="contact-name">
-              <a id="fb-name">Puspa Indonesia</a>
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="popup-confirm" id="popup-confirm">
-    <img class="tick_img" src="/donasi_images/tick.png" width="80px" height="80px">
-    <div class="text-popup">
-        <h2>Terima kasih!</h2>
-        <a>Donasi anda telah kami terima. Anda bisa cek e-mail anda untuk melihat detail donasi anda.</a>
+    <div class="footer">
+    <div class="footer-logo">
+        <img src="/navbar_images/logo_puspa.png" alt="logo" class="footer-logo">
+        <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
     </div>
-    <button class="btn-kembali">
-        <a href="Info-donasi.html">Kembali</a>
-    </button>
-</div>
 
+
+    <div class="contacts">
+        <div class="contact1">
+            <a href="#" class="fa fa-instagram" id="ig-logo"></a>
+            <div class="contact-name">
+                <a id="ig-name">bersama.puspa.id</a>
+            </div>
+        </div>
+
+
+        <div class="contact2">
+            <a href="#" class="fa fa-facebook" id="fb-logo"></a>
+            <div class="contact-name">
+                <a id="fb-name">Puspa Indonesia</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup-confirm" id="popup-confirm">
+        <img class="tick_img" src="/donasi_images/tick.png" width="80px" height="80px">
+        <div class="text-popup">
+            <h2>Terima kasih!</h2>
+            <a>Donasi anda telah kami terima. <br>Detail donasi akan dikirimkan ke e-mail anda.</a>
+        </div>
+        <button class="btn-kembali">
+            <a href="Info-donasi.html">Kembali</a>
+        </button>
+    </div>
+
+    <script>
+        function showPopup() {
+            let popup = document.getElementById("popup-confirm");
+            let overlay = document.getElementById("overlay");
+            popup.style.visibility = "visible";
+            overlay.style.visibility = "visible";
+        }
+    </script>
 </body>
 </html>
