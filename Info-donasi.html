@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="/css/infodonasi.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/infodonasi.css">
 </head>
 <body>
     <nav class="navbar">
@@ -39,9 +39,6 @@
     <div class="hero-text">
         <h1 id="hero-header">Dukung PUSPA dalam Usaha Membantu Petani Indonesia</h1>
         <h2 id="hero-desc">Donasi melalui PUSPA, membantu masyarakat mengurangi limbah pangan dan meningkatkan kesejahteraan petani secara berkelanjutan</h2>
-        <button class="btn-donasi" id="btn-scroll-donasi">
-            <a href="#deskripsi-donasi">DONASI SEKARANG</a>
-        </button>
     </div>
 
     <div class="kolom-penjelasan">
@@ -52,47 +49,90 @@
 
     <div class="contents">
 
+        <!-- ilustrasi donasi -->
+        <div class="donasi-illus">
+            <img src="/donasi_images/donation-vector.png" alter="ilustrasi-donasi" class="img_illus">
+        </div>
+
+        <button class="btn-donasi" id="btn-scroll-donasi">
+            <a href="#deskripsi-donasi">DONASI SEKARANG</a>
+        </button>
+
         <!-- penjelasan penyaluran donasi -->
         <div class="container">
             <a>Donasi yang tersalurkan melalui PUSPA akan dialokasikan kepada pengeluaran operasional kegiatan pengomposan PUSPA, yang meliputi alat-alat untuk membuat kompos, kemasan kompos, serta biaya logistik. Segala sisa dari donasi yang tidak terpakai untuk operasional pembuatan kompos akan disalurkan secara langsung kepada petani-petani yang bekerja-sama dengan PUSPA.</a>
         </div>
 
-
-        <!-- ilustrasi donasi -->
-        <div class="donasi-illus" id="deskripsi-donasi">
-            <img src="/donasi_images/donation-vector.png" alter="ilustrasi-donasi" class="img_illus">
+        <div class="tahap-div">
+            <a class="judul-tahap">Penggunaan Donasi PUSPA</a>
+            <div class="tahap-items">
+                <div class="tahap1">
+                    <img src="/donasi_images/Alat.png">
+                    <a>Peralatan Pembuatan Kompos</a>
+                </div>
+    
+                <div class="tahap2">
+                    <img src="/donasi_images/Biaya.png">
+                    <a>Biaya Logistik Untuk Distribusi</a>
+                </div>
+    
+                <div class="tahap3">
+                    <img src="/donasi_images/Konsum.png">
+                    <a>Konsumsi Untuk yang Terlibat</a>
+                </div>
+    
+                <div class="tahap4">
+                    <img src="/donasi_images/Human resource.png">
+                    <a>Jasa Penyedia Tenaga Kerja</a>
+                </div>
+            </div>
         </div>
 
         <!-- informasi jenis donasi -->
-        <div class="deskripsi-donasi">
-            <div class="container-reguler">
-                <div class="deskripsi-text">
-                    <h2>Donasi Reguler</h2>
-                    <a>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut et, rem in voluptatem ex asperiores iste quam inventore recusandae dolores harum obcaecati officia, est, corrupti veritatis ullam consequatur veniam alias?</a>
+        <div class="deskripsi-donasi"  id="deskripsi-donasi">
+            <div class="reguler">
+                <img src="/donasi_images/Donasi.png" alt="Donasi sekali">
+
+                <div class="container-reguler">
+                    <div class="deskripsi-text">
+                        <h2>Reguler</h2>
+                        <a>Donasi sekali dan menjadi salah satu kontributor bagi kelancaran kegiatan PUSPA sebagai usaha untuk mencapai tujuan Zero Hunger. Donasi sebesar apapun akan sangat berguna bagi kami.</a>
+                    </div>
+                    <button class="btn-donasi">
+                        <a href="Donasi.html">DONASI SEKALI</a>
+                    </button>
                 </div>
-                <button class="btn-donasi">
-                    <a href="Donasi.html">DONASI SEKALI</a>
-                </button>
+
             </div>
-    
-            <div class="container-berulang">
-                <div class="deskripsi-text">
-                    <h2>Donasi Berulang</h2>
-                    <a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil expedita tenetur eius suscipit, libero maiores culpa, modi ducimus sunt non facere harum rem unde, beatae laboriosam corrupti dolores facilis! Alias!</a>
+            
+            <div class="berulang">
+                <img src="/donasi_images/Berulang.png" alt="Donasi berulang">
+
+                <div class="container-berulang">
+                    <div class="deskripsi-text">
+                        <h2>Berulang</h2>
+                        <a>Jadilah pendukung setia PUSPA dengan melakukan donasi secara otomatis seusai interval yang ditentukan. Kontribusi anda yang konsisten akan bantu memastikan bahwa segala kegiatan PUSPA berjalan lancar.</a>
+                    </div>
+                    <button class="btn-donasi">
+                        <a href="Donasi-berulang.html">DAFTAR MEMBERSHIP</a>
+                    </button>
                 </div>
-                <button class="btn-donasi">
-                    <a href="Donasi-berulang.html">JADI SUBSCRIBER</a>
-                </button>
+
             </div>
         </div>
-        
 
         <!-- mitra yang bekerja sama dengan puspa -->
         <div class="container" id="container-2">
             <a>Terima kasih kepada mitra yang telah bekerja-sama dengan PUSPA:</a>
-        </div>
-    </div>
 
+            <div class="logo-sponsor">
+                <img src="/donasi_images/logo_UB.png" alt="UB">
+                <img src="/donasi_images/filkom.png" alt="FILKOM"> 
+                <img id="BNI" src="/donasi_images/logo_BNI.png" alt="BNI"> 
+            </div>
+        </div>
+
+    </div>
 
     <!-- footer -->
     <div class="footer">

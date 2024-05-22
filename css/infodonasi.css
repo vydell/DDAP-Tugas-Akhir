@@ -24,6 +24,9 @@ html { scroll-behavior: smooth; }
     transition: .2s linear;
 }
 
+
+
+/* hero image */
 .hero {
     display: flex;
 }
@@ -66,6 +69,7 @@ html { scroll-behavior: smooth; }
     font-weight: 600;   
 }
 
+
 .contents {
     top:0;
     background-color:#ECE9E4;
@@ -75,6 +79,9 @@ html { scroll-behavior: smooth; }
     padding-bottom: 100px;
 }
 
+
+
+/* penjelasan umum donasi PUSPA */
 .container {
     padding: 30px;
     margin: 20px auto 60px;
@@ -89,24 +96,11 @@ html { scroll-behavior: smooth; }
     text-align: justify;
     color: #406A40;
 }
-
-#deskripsi-donasi {
-    scroll-margin-top: 70px;
-}
-
-#btn-scroll-donasi {
-    display: block;
-    position: absolute;
-    top: 130%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
 .donasi-illus {
     display: flex;
     width: fit-content;
     height: 300px;
-    margin: 50px auto;
+    margin: 30px auto;
     padding-left: 40px;
     justify-content: center;
 }
@@ -117,38 +111,19 @@ html { scroll-behavior: smooth; }
     max-height: 100%;
 }
 
-.deskripsi-donasi {
-    display: flex;
-    margin: 0 21%;
-    gap: 50px;
-}
-
-.container-reguler, .container-berulang {
-    flex: 1;
-    background-color: #406A40;
-    border-radius: 20px;
-    padding: 30px;
-    justify-content: center;
-    text-align: left;
-    color:#ECE9E4;
-}
-
-.deskripsi-text {
-    min-height: 200px;
-    text-align: justify;
-}
-
-.container-reguler h2, .container-berulang h2 {
-    margin-bottom: 10px;
+#btn-scroll-donasi {
+    display: block;
+    margin: auto;
 }
 
 .btn-donasi {
+    top: 80px;
     width: 190px;
     height: 50px;
-    margin-top: 30px;
     background-color: #e37d2e;
     border-radius: 10px;
 }
+
 .btn-donasi a {
     font-family: 'Open Sans Hebrew', sans-serif;
     color:#faf9ff;
@@ -160,10 +135,123 @@ html { scroll-behavior: smooth; }
     background-color: #ffa55c;
 }
 
+
+
+/* penggunaan donasi puspa */
+.tahap-div {
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+.judul-tahap {
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #406A40;
+}
+
+.tahap-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 100%;
+    margin-right: 60px;
+    margin-left: 60px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tahap1, .tahap2, .tahap3, .tahap4{
+    display: inline-block;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+    margin-bottom: 30px;
+    font-family: 'Open Sans Hebrew', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color:#406A40;
+}
+
+.tahap1 img, .tahap2 img, .tahap3 img, .tahap4 img{
+    display: inline-block;
+    border-radius: 20%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 10px #b7a8a8;
+}
+
+
+
+/* deskripsi jenis-jenis donasi */
+#deskripsi-donasi {
+    scroll-margin-top: 120px;
+}
+
+.deskripsi-donasi {
+    display: flex;
+    margin: 0 21%;
+    gap: 50px;
+}
+
+.reguler, .berulang {
+    flex: 1;
+    justify-content: center;
+}
+
+.container-reguler, .container-berulang {
+    background-color: #406A40;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    color:#ECE9E4;
+}
+
+.reguler img, .berulang img {
+    display: flex;
+    width: 60%;
+    object-fit: contain;
+    margin: auto auto 30px  auto;
+}
+
+.deskripsi-text {
+    min-height: 230px;
+    text-align: justify;
+}
+
+.container-reguler h2, .container-berulang h2 {
+    margin-bottom: 10px;
+}
+
 #container-2 {
-    margin-top: 100px;
+    margin: 200px auto 0 auto;
     box-shadow: none;
     width: 60%;
+    justify-content: center;
+    text-align: center;
+    display: block;
+}
+
+.logo-sponsor {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+.logo-sponsor img {
+    margin-top: 20px;
+    object-fit: contain;
+    width: 100%;
+    height: 70px;
+}
+
+#BNI {
+    margin-top: 30px;
+    height: 50px;
 }
 
 @media(max-width: 1080px) {
@@ -182,8 +270,21 @@ html { scroll-behavior: smooth; }
 }
 
 @media(max-width:1100px) {
+
+    .tahap-div {
+        margin: 0 80px 150px 80px;
+    }
+
+    .tahap1, .tahap2, .tahap3, .tahap4 {
+        margin-bottom: 0;
+    }
+
     .deskripsi-donasi {
         margin: 0 6%;
+    }
+
+    .input-box {
+        min-width: 100%;
     }
 }
 
@@ -192,12 +293,16 @@ html { scroll-behavior: smooth; }
         width: 95%;
     }
 
+    .reguler img, .berulang img {
+        max-height: 200px;
+    } 
+
     .deskripsi-donasi {
         flex-wrap: wrap;
         font-size: 14px;
     }
 
-    .container-reguler, .container-berulang {
+    .reguler, .berulang {
         min-width: 50%;
     }
 
@@ -208,7 +313,28 @@ html { scroll-behavior: smooth; }
     }
 
     .deskripsi-text {
-        min-height: 100px;
+        min-height: 180px;
         text-align: justify;
+    }
+
+    .tahap-items {
+        gap: 30px;
+    }
+
+    .tahap1, .tahap2, .tahap3, .tahap4 {
+        margin-bottom: 0;
+    }
+    
+    #container-2 {
+        margin-bottom: 50px;
+    }
+
+    .logo-sponsor {
+        margin-top: 20px;
+        display: block;
+    }
+
+    .logo-sponsor img {
+        height: 80px;
     }
 }

@@ -5,6 +5,7 @@
     <title>PUSPA 2</title>
     
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/formkritik.css">
 
 
@@ -35,69 +36,172 @@
     <div class="container">
  
             <h1 class="form-title">Form Feedback</h1>
+            <a id="pilihan-tujuan">Pilih tujuan kritik anda:</a>
+            
+            <form action="#">
 
+                <script>
+                    function showTick() {
+                        var tick1 = document.getElementById("tick1");
+                        var tick2 = document.getElementById("tick2");
+                        var tick3 = document.getElementById("tick3");
+                        var tujuan = document.querySelectorAll('input[name="pilih"]');
+                        var selected = document.querySelector('input[name="pilih"]:checked').value;
 
-             <form action="#">
-                 
+                        if (selected == "website") {
+                            clearTick();
+                            tick1.style.visibility = "visible";
+                        } else if (selected == "donasi") {
+                            clearTick();
+                            tick2.style.visibility = "visible";
+                        } else if (selected == "volunteer") {
+                            clearTick();
+                            tick3.style.visibility = "visible";
+                        }
+                        
+                        tujuan.forEach(btn => {
+                            btn.addEventListener("change", showTick);
+                        });
+
+                        function clearTick() {
+                            tick1.style.visibility = "hidden";
+                            tick2.style.visibility = "hidden";
+                            tick3.style.visibility = "hidden";
+                        }
+                    }
+                </script>
+
                 <div class="user-input-box" >
-                    <input type="radio" id="Website" name="pilih">
-                    <label for="Website">WEBSITE</label>
-               
-                    <input type="radio" id="Donasi" name="pilih">
-                    <label for="Donasi">DONASI</label>
-               
-                    <input type="radio" id="Volunteer" name="pilih">
-                    <label for="Volunteer">VOLUNTEER</label>
+
+                    <div class="pilihan-tujuan">
+                        <div class="pilihan">
+                            <div class="tick">
+                                <img id="tick1" src="/donasi_images/tick.png" alt="terpilih">
+                            </div>
+                            <input class="input_pilihan" onclick="showTick()" type="radio" value="website" id="Website" name="pilih">
+                            <div class="gambar-pilihan">
+                                <img src="/form_kritik_images/website.png" alt="website">
+                            </div>
+                            <label for="Website">WEBSITE</label>
+                        </div>
+    
+                        <div class="pilihan">
+                            <div class="tick">
+                                <img id="tick2" src="/donasi_images/tick.png" alt="terpilih">
+                            </div>
+                            <input class="input_pilihan" onclick="showTick()" type="radio" value="donasi" id="Donasi" name="pilih">
+                            <div class="gambar-pilihan">
+                                <img src="/form_kritik_images/donasi.png" alt="donasi">
+                            </div>
+                            <label for="Donasi">DONASI</label>
+                        </div>
+    
+                        <div class="pilihan">
+                            <div class="tick">
+                                <img id="tick3" src="/donasi_images/tick.png" alt="terpilih">
+                            </div>
+                            <input class="input_pilihan" onclick="showTick()" type="radio" value="volunteer" id="Volunteer" name="pilih">
+                            <div class="gambar-pilihan">
+                                <img src="/form_kritik_images/volunteer.png" alt="volunteer">
+                            </div>
+                            <label for="Volunteer">VOLUNTEER</label>
+                        </div>
+                    </div>
                 </div>
 
 
                 <div class="rating">
-                   
                     <input type="radio" name="rate" id="rating-opt5" data-idx="0" hidden>
                     <label for="rating-opt5"><span>Sangat Puas</span></label>
 
-
                     <input type="radio" name="rate" id="rating-opt4" data-idx="1" hidden>
                     <label for="rating-opt4"><span>Puas</span></label>
-                   
+                    
                     <input type="radio" name="rate" id="rating-opt3" data-idx="2" hidden>
                     <label for="rating-opt3"><span>Cukup</span></label>
-
 
                     <input type="radio" name="rate" id="rating-opt2" data-idx="3" hidden>
                     <label for="rating-opt2"><span>Kurang Puas</span></label>
 
-
                     <input type="radio" name="rate" id="rating-opt1" data-idx="4" hidden>
                     <label for="rating-opt1"><span>Sangat Tidak Puas</span></label>
-
-
                 </div>
-                   
+
+                <script>
+                    let circle = document.getElementById('rating')
+                        circle.addEventListener('click', function(e) {
+                        e.target.classList.toggle('rotate-star')
+                        e.target.classList.toggle('deselect-star')
+                    })
+                </script>
+                    
+                <div class="pilih-autofill">
+                    <div class="autofill">
+                        <input class="input-autofill" type="radio" value="autofill1" name="autofill" id="autofill1">
+                        <label class="label-autofill" for="autofill1">Tampilan sangat bagus</label>
+                        <input class="input-autofill" type="radio" value="autofill2" name="autofill" id="autofill2">
+                        <label class="label-autofill" for="autofill2">Informasi mudah dimengerti</label>
+                        <input class="input-autofill" type="radio" value="autofill3" name="autofill" id="autofill3">
+                        <label class="label-autofill" for="autofill3">Sangat memuaskan, semoga sukses ke depannya</label>
+                    </div>
+                </div>
+
                 <div class="input-text">
                     <p>Beri Masukan</p>
                     <textarea class="form-control"></textarea>
-                  </div>
+                </div>
 
-
-                  <div class="form-submit-btn">
-                    <input type="submit" value="submit">
-                  </div>
-         
-             </form>
- 
+                <div class="form-submit-btn">
+                    <input onclick="showPopup()" type="button" value="SUBMIT">
+                </div>
+            </form>
         </div>
-             
- 
      </div>
 
+     <div class="footer">
+        <div class="footer-logo">
+            <img src="/navbar_images/logo_puspa.png" alt="logo" class="footer-logo">
+            <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
+        </div>
 
+        <div class="contacts">
+            <div class="contact1">
+                <a href="#" class="fa fa-instagram" id="ig-logo"></a>
+                <div class="contact-name">
+                    <a id="ig-name">bersama.puspa.id</a>
+                </div>
+            </div>
 
-
-
-
-
-
+            <div class="contact2">
+                <a href="#" class="fa fa-facebook" id="fb-logo"></a>
+                <div class="contact-name">
+                    <a id="fb-name">Puspa Indonesia</a>
+                </div>
+            </div>
+        </div>
+    </div>
    
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup-confirm" id="popup-confirm">
+        <img class="tick_img" src="/donasi_images/tick.png" width="80px" height="80px">
+        <div class="text-popup">
+            <h2>Terima kasih!</h2>
+            <a>Masukan anda akan berguna untuk meningkatkan kualitas dan performa PUSPA ke depannya.</a>
+        </div>
+        <button class="btn-kembali">
+            <a href="Homepage.html">Kembali</a>
+        </button>
+    </div>
+
+    <script>
+        function showPopup() {
+            let popup = document.getElementById("popup-confirm");
+            let overlay = document.getElementById("overlay");
+            popup.style.visibility = "visible";
+            overlay.style.visibility = "visible";
+        }
+    </script>
+
 </body>
 </html>

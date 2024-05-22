@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+
+*{
+    font-family: 'Open Sans Hebrew', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.hero_area {
+    position: relative;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+ 
+.hero_area .hero_bg_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    overflow: hidden;
+    z-index: -1;
+}
+ 
+.hero_area .hero_bg_box .bg_img_box {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.hero_area .hero_bg_box img {
+    max-width: 100%; /* Menyesuaikan ukuran gambar agar tidak terlalu besar */
+    height: auto;
+}
+/*end header section*/
+
+
+
+/* slider section */
+.slider_section .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mengatur jarak antara .detail-box dan .img-box */
+}
+
+
+.slider_section .detail-box {
+    padding-bottom: 90px;
+    padding-left: 30px;
+}
+ 
+.slider_section .detail-box h1 {
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+ 
+.slider_section .detail-box p {
+    color: #ffffff;
+    font-size: 15px;
+}
+ 
+.slider_section .detail-box a {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 45px;
+    background-color: #de8b3e ;
+    border: 1px solid #de8b3e ;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-top: 15px;
+    margin-bottom: auto;
+}
+ 
+.slider_section .detail-box a:hover {
+    background-color: transparent;
+    color: #de8b3e;
+}
+
+
+.slider_section .img-box {
+    flex: 1; /* Menggunakan flex-grow untuk menyesuaikan lebar .img-box */
+}
+
+
+.slider_section .img-box img {
+    max-width: 100%; /* Menyesuaikan ukuran gambar agar tidak terlalu besar */
+    height: auto;
+}
+
+
+/* coba awal */
+.box {
+    position: relative;
+    width: 250px; /* Mengatur lebar box menjadi 250px */
+    height: 250px; /* Tetapkan tinggi kotak */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 0 10px;
+    padding: 15px 15px;
+    background-color: #ECE9E4;
+    color: #406A40;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 40px; /* Tambahkan margin-top untuk menambah jarak dengan a */
+
+
+}
+
+
+.box .img-box {
+    width: 240px;
+    height: 190px;
+    overflow: hidden; /* Tambahkan overflow: hidden; untuk mencegah gambar keluar dari kotak */
+    padding: 0;
+}
+
+
+.box .img-box img {
+    width: 100%;
+    height: auto;
+}
+
+
+.name {
+    margin-top: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+
+.hover-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang efek hover */
+    color: white;
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box:hover .hover-text {
+    opacity: 1; /* Munculkan efek hover saat hover pada box */
+}
+
+
+.box:hover, .box.active {
+    background-color: #de8b3e;
+    color: #ffffff;
+}
+
+
+.feature_section {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+
+.feature_section .feature_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+.feature_section .feature_container .box {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+           
+}

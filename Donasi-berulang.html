@@ -98,8 +98,9 @@
         <div id="horizontal-line"></div>
 
         <!--INPUT FIELDS-->
-        <label for="pilihan">Bayar Menggunakan Credit/Debit Card</label>
+        <label id="bayar-menggunakan" for="pilihan">Bayar Menggunakan Credit/Debit Card</label>
         
+        <!-- NAMA -->
         <div class="column">
             <div class="input-box">
                 <label for="firstName">Nama depan</label>
@@ -112,28 +113,31 @@
             </div>
         </div>
 
+        <!-- ALAMAT -->
         <div class="input-box">
             <label for="address">Alamat</label>
             <input class="input-box" type="text" id="address" name="address" required>
         </div>
 
-        <div class="column">
-            <div class="input-box">
+        <!-- KOTA KABUPATEN KODEPOS -->
+        <div class="column-alamat">
+            <div class="input-box-alamat">
                 <label for="city">Kota</label>
                 <input type="text" id="city" name="city" required>
             </div>
 
-            <div class="input-box">
+            <div class="input-box-alamat">
                 <label for="district">Kabupaten</label>
                 <input type="text" id="district" name="district" required>
             </div>
 
-            <div class="input-box">
+            <div class="input-box-alamat">
                 <label for="postalCode">Kode pos</label>
                 <input type="text" id="postalCode" name="postalCode" required>
             </div>
         </div>
 
+        <!-- KARTU -->
         <div class="kartu">
             <div class="radio-kartu">
                 <input class="input-radio" type="radio" value="visa" name="kartu" id="visa">
@@ -143,10 +147,12 @@
             </div>
         </div>
 
+        <!-- INPUT FIELDS KARTU -->
         <div class="input-box">
             <label for="cardNumber">Nomor kartu</label>
             <input type="text" id="cardNumber" name="cardNumber" required>
     
+            <!-- EXP CVV KARTU -->
             <div class="detail-kartu">
                 <div class="tgl-exp">
                     <label for="expiryDate">Tanggal kadaluarsa</label>
@@ -161,7 +167,7 @@
         </div>
 
         <div class="parent">
-            <input type="submit" value="Donasi Sekarang">
+            <input onclick="showPopup()" type="submit" value="Donasi Sekarang">
         </div>
     </form>
       
@@ -190,6 +196,28 @@
         </div>
     </div>
 
+    <!-- POPUP KONFIRMASI -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup-confirm" id="popup-confirm">
+        <img class="tick_img" src="/donasi_images/tick.png" width="80px" height="80px">
+        <div class="text-popup">
+            <h2>Terima kasih!</h2>
+            <a>Donasi anda telah kami terima. <br>Detail donasi akan dikirimkan ke e-mail anda.</a>
+        </div>
+        <button class="btn-kembali">
+            <a href="Info-donasi.html">Kembali</a>
+        </button>
+    </div>
+
+    <script>
+        function showPopup() {
+            let popup = document.getElementById("popup-confirm");
+            let overlay = document.getElementById("overlay");
+            popup.style.visibility = "visible";
+            overlay.style.visibility = "visible";
+        }
+    </script>
 
 </body>
 </html>
