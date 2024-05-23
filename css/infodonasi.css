@@ -88,7 +88,7 @@ html { scroll-behavior: smooth; }
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 40%;
     height: fit-content;
     border-radius: 20px;
     box-shadow: 0px 1px 5px #b7a8a8;
@@ -177,14 +177,13 @@ html { scroll-behavior: smooth; }
 
 .tahap1 img, .tahap2 img, .tahap3 img, .tahap4 img{
     display: inline-block;
-    border-radius: 20%;
+    border-radius: 100%;
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
     box-shadow: 0px 1px 10px #b7a8a8;
+    background-color:#406A40;
 }
-
-
 
 /* deskripsi jenis-jenis donasi */
 #deskripsi-donasi {

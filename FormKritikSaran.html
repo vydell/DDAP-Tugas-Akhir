@@ -35,130 +35,128 @@
 
     <div class="container">
  
-            <h1 class="form-title">Form Feedback</h1>
-            <a id="pilihan-tujuan">Pilih tujuan kritik anda:</a>
+        <h1 class="form-title">Form Feedback</h1>
+        <a id="pilihan-tujuan">Pilih tujuan kritik anda:</a>
             
-            <form action="#">
+        <form action="#">
 
-                <script>
-                    function showTick() {
-                        var tick1 = document.getElementById("tick1");
-                        var tick2 = document.getElementById("tick2");
-                        var tick3 = document.getElementById("tick3");
-                        var tujuan = document.querySelectorAll('input[name="pilih"]');
-                        var selected = document.querySelector('input[name="pilih"]:checked').value;
+            <script>
+                function showTick() {
+                    var tick1 = document.getElementById("tick1");
+                    var tick2 = document.getElementById("tick2");
+                    var tick3 = document.getElementById("tick3");
+                    var tujuan = document.querySelectorAll('input[name="pilih"]');
+                    var selected = document.querySelector('input[name="pilih"]:checked').value;
 
-                        if (selected == "website") {
-                            clearTick();
-                            tick1.style.visibility = "visible";
-                        } else if (selected == "donasi") {
-                            clearTick();
-                            tick2.style.visibility = "visible";
-                        } else if (selected == "volunteer") {
-                            clearTick();
-                            tick3.style.visibility = "visible";
-                        }
-                        
-                        tujuan.forEach(btn => {
-                            btn.addEventListener("change", showTick);
-                        });
-
-                        function clearTick() {
-                            tick1.style.visibility = "hidden";
-                            tick2.style.visibility = "hidden";
-                            tick3.style.visibility = "hidden";
-                        }
+                    if (selected == "website") {
+                        clearTick();
+                        tick1.style.visibility = "visible";
+                    } else if (selected == "donasi") {
+                        clearTick();
+                        tick2.style.visibility = "visible";
+                    } else if (selected == "volunteer") {
+                        clearTick();
+                        tick3.style.visibility = "visible";
                     }
-                </script>
+                    
+                    tujuan.forEach(btn => {
+                        btn.addEventListener("change", showTick);
+                    });
 
-                <div class="user-input-box" >
+                    function clearTick() {
+                        tick1.style.visibility = "hidden";
+                        tick2.style.visibility = "hidden";
+                        tick3.style.visibility = "hidden";
+                    }
+                }
+            </script>
 
-                    <div class="pilihan-tujuan">
-                        <div class="pilihan">
-                            <div class="tick">
-                                <img id="tick1" src="/donasi_images/tick.png" alt="terpilih">
-                            </div>
-                            <input class="input_pilihan" onclick="showTick()" type="radio" value="website" id="Website" name="pilih">
-                            <div class="gambar-pilihan">
-                                <img src="/form_kritik_images/website.png" alt="website">
-                            </div>
-                            <label for="Website">WEBSITE</label>
+            <div class="user-input-box" >
+
+                <div class="pilihan-tujuan">
+                    <div class="pilihan">
+                        <div class="tick">
+                            <img id="tick1" src="/form_kritik_images/tick.png" alt="terpilih">
                         </div>
-    
-                        <div class="pilihan">
-                            <div class="tick">
-                                <img id="tick2" src="/donasi_images/tick.png" alt="terpilih">
-                            </div>
-                            <input class="input_pilihan" onclick="showTick()" type="radio" value="donasi" id="Donasi" name="pilih">
-                            <div class="gambar-pilihan">
-                                <img src="/form_kritik_images/donasi.png" alt="donasi">
-                            </div>
-                            <label for="Donasi">DONASI</label>
+                        <input class="input_pilihan" onclick="showTick()" type="radio" value="website" id="Website" name="pilih">
+                        <div class="gambar-pilihan">
+                            <img src="/form_kritik_images/website.png" alt="website">
                         </div>
-    
-                        <div class="pilihan">
-                            <div class="tick">
-                                <img id="tick3" src="/donasi_images/tick.png" alt="terpilih">
-                            </div>
-                            <input class="input_pilihan" onclick="showTick()" type="radio" value="volunteer" id="Volunteer" name="pilih">
-                            <div class="gambar-pilihan">
-                                <img src="/form_kritik_images/volunteer.png" alt="volunteer">
-                            </div>
-                            <label for="Volunteer">VOLUNTEER</label>
+                        <label for="Website">WEBSITE</label>
+                    </div>
+
+                    <div class="pilihan">
+                        <div class="tick">
+                            <img id="tick2" src="/form_kritik_images/tick.png" alt="terpilih">
                         </div>
+                        <input class="input_pilihan" onclick="showTick()" type="radio" value="donasi" id="Donasi" name="pilih">
+                        <div class="gambar-pilihan">
+                            <img src="/form_kritik_images/donasi.png" alt="donasi">
+                        </div>
+                        <label for="Donasi">DONASI</label>
+                    </div>
+
+                    <div class="pilihan">
+                        <div class="tick">
+                            <img id="tick3" src="/form_kritik_images/tick.png" alt="terpilih">
+                        </div>
+                        <input class="input_pilihan" onclick="showTick()" type="radio" value="volunteer" id="Volunteer" name="pilih">
+                        <div class="gambar-pilihan">
+                            <img src="/form_kritik_images/volunteer.png" alt="volunteer">
+                        </div>
+                        <label for="Volunteer">VOLUNTEER</label>
                     </div>
                 </div>
+            </div>
 
 
-                <div class="rating">
-                    <input type="radio" name="rate" id="rating-opt5" data-idx="0" hidden>
-                    <label for="rating-opt5"><span>Sangat Puas</span></label>
+            <div class="rating">
+                <input type="radio" name="rate" id="rating-opt5" data-idx="0" hidden>
+                <label for="rating-opt5"><span>Sangat Puas</span></label>
 
-                    <input type="radio" name="rate" id="rating-opt4" data-idx="1" hidden>
-                    <label for="rating-opt4"><span>Puas</span></label>
-                    
-                    <input type="radio" name="rate" id="rating-opt3" data-idx="2" hidden>
-                    <label for="rating-opt3"><span>Cukup</span></label>
+                <input type="radio" name="rate" id="rating-opt4" data-idx="1" hidden>
+                <label for="rating-opt4"><span>Puas</span></label>
+                
+                <input type="radio" name="rate" id="rating-opt3" data-idx="2" hidden>
+                <label for="rating-opt3"><span>Cukup</span></label>
 
-                    <input type="radio" name="rate" id="rating-opt2" data-idx="3" hidden>
-                    <label for="rating-opt2"><span>Kurang Puas</span></label>
+                <input type="radio" name="rate" id="rating-opt2" data-idx="3" hidden>
+                <label for="rating-opt2"><span>Kurang Puas</span></label>
 
-                    <input type="radio" name="rate" id="rating-opt1" data-idx="4" hidden>
-                    <label for="rating-opt1"><span>Sangat Tidak Puas</span></label>
+                <input type="radio" name="rate" id="rating-opt1" data-idx="4" hidden>
+                <label for="rating-opt1"><span>Sangat Tidak Puas</span></label>
+            </div>
+
+            <script>
+                let circle = document.getElementById('rating')
+                circle.addEventListener('click', function(e) {
+                    e.target.classList.toggle('rotate-star')
+                })
+            </script>
+                
+            <div class="pilih-autofill">
+                <div class="autofill">
+                    <input class="input-autofill" type="radio" value="autofill1" name="autofill" id="autofill1">
+                    <label class="label-autofill" for="autofill1">Tampilan sangat bagus</label>
+                    <input class="input-autofill" type="radio" value="autofill2" name="autofill" id="autofill2">
+                    <label class="label-autofill" for="autofill2">Informasi mudah dimengerti</label>
+                    <input class="input-autofill" type="radio" value="autofill3" name="autofill" id="autofill3">
+                    <label class="label-autofill" for="autofill3">Sangat memuaskan, semoga sukses ke depannya</label>
                 </div>
+            </div>
 
-                <script>
-                    let circle = document.getElementById('rating')
-                        circle.addEventListener('click', function(e) {
-                        e.target.classList.toggle('rotate-star')
-                        e.target.classList.toggle('deselect-star')
-                    })
-                </script>
-                    
-                <div class="pilih-autofill">
-                    <div class="autofill">
-                        <input class="input-autofill" type="radio" value="autofill1" name="autofill" id="autofill1">
-                        <label class="label-autofill" for="autofill1">Tampilan sangat bagus</label>
-                        <input class="input-autofill" type="radio" value="autofill2" name="autofill" id="autofill2">
-                        <label class="label-autofill" for="autofill2">Informasi mudah dimengerti</label>
-                        <input class="input-autofill" type="radio" value="autofill3" name="autofill" id="autofill3">
-                        <label class="label-autofill" for="autofill3">Sangat memuaskan, semoga sukses ke depannya</label>
-                    </div>
-                </div>
+            <div class="input-text">
+                <p>Beri Masukan</p>
+                <textarea class="form-control"></textarea>
+            </div>
 
-                <div class="input-text">
-                    <p>Beri Masukan</p>
-                    <textarea class="form-control"></textarea>
-                </div>
+            <div class="form-submit-btn">
+                <input onclick="showPopup()" type="button" value="SUBMIT">
+            </div>
+        </form>
+    </div>
 
-                <div class="form-submit-btn">
-                    <input onclick="showPopup()" type="button" value="SUBMIT">
-                </div>
-            </form>
-        </div>
-     </div>
-
-     <div class="footer">
+    <div class="footer">
         <div class="footer-logo">
             <img src="/navbar_images/logo_puspa.png" alt="logo" class="footer-logo">
             <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
