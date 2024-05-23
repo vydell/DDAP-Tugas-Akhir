@@ -22,7 +22,7 @@
             <ul class="menu">
                 <li><a href="Info-donasi.html">DONASI</a></li>
                 <li><a href="Homepage.html">VOLUNTEER</a></li>
-                <li><a href="Homepage.html">TENTANG KAMI</a></li>
+                <li><a href="Halaman-Informasi.html">TENTANG KAMI</a></li>
                 <li><a href="FormKritikSaran.html">FEEDBACK</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
@@ -150,7 +150,8 @@
         <!-- INPUT FIELDS KARTU -->
         <div class="input-box">
             <label for="cardNumber">Nomor kartu</label>
-            <input type="text" id="cardNumber" name="cardNumber" required>
+            <input id="cardNumber" name="cardNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" 
+            autocomplete="cc-number" maxlength="19" placeholder="0000 0000 0000 0000" required>
     
             <!-- EXP CVV KARTU -->
             <div class="detail-kartu">
@@ -161,9 +162,14 @@
                 
                 <div class="cvv">
                     <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" name="cvv" required>
+                    <input type="text" id="cvv" name="cvv" placeholder="000" required>
                 </div>
             </div>
+        </div>
+
+        <div class="anon">
+            <input type="checkbox" id="anonymous" name="anonymous">
+            <label id="checbox-text" for="anonymous">Sembunyikan nama saya (donasi sebagai anonim)</label><br>
         </div>
 
         <div class="parent">

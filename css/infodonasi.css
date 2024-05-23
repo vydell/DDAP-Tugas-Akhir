@@ -177,11 +177,13 @@ html { scroll-behavior: smooth; }
 
 .tahap1 img, .tahap2 img, .tahap3 img, .tahap4 img{
     display: inline-block;
-    border-radius: 20%;
+    padding: 10px;
+    border-radius: 100%;
     width: 200px;
     height: 200px;
     margin-bottom: 10px;
-    box-shadow: 0px 1px 10px #b7a8a8;
+    background: linear-gradient(0deg, rgb(47, 114, 96) 5%, rgb(68, 118, 68) 100%);
+    box-shadow: 0px 3px 10px #868686;
 }
 
 
@@ -203,7 +205,7 @@ html { scroll-behavior: smooth; }
 }
 
 .container-reguler, .container-berulang {
-    background-color: #406A40;
+    background: linear-gradient(0deg, rgb(47, 114, 96) 5%, rgb(68, 118, 68) 100%);
     border-radius: 20px;
     padding: 30px;
     text-align: left;
