@@ -24,7 +24,7 @@
             <ul class="menu">
                 <li><a href="Info-donasi.html">DONASI</a></li>
                 <li><a href="Homepage.html">VOLUNTEER</a></li>
-                <li><a href="Homepage.html">TENTANG KAMI</a></li>
+                <li><a href="Halaman-Informasi.html">TENTANG KAMI</a></li>
                 <li><a href="Kritiksaran.html">FEEDBACK</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
@@ -35,8 +35,11 @@
 
     <div class="container">
  
-        <h1 class="form-title">Form Feedback</h1>
-        <a id="pilihan-tujuan">Pilih tujuan kritik anda:</a>
+        <div class="judul">
+            <h1 class="form-title">Form Feedback</h1>
+            <a id="pilihan-tujuan">Pilih tujuan kritik anda:</a>
+        </div>
+            
             
         <form action="#">
 
@@ -76,7 +79,7 @@
                 <div class="pilihan-tujuan">
                     <div class="pilihan">
                         <div class="tick">
-                            <img id="tick1" src="/form_kritik_images/tick.png" alt="terpilih">
+                            <img id="tick1" src="/donasi_images/tick.png" alt="terpilih">
                         </div>
                         <input class="input_pilihan" onclick="showTick()" type="radio" value="website" id="Website" name="pilih">
                         <div class="gambar-pilihan">
@@ -87,7 +90,7 @@
 
                     <div class="pilihan">
                         <div class="tick">
-                            <img id="tick2" src="/form_kritik_images/tick.png" alt="terpilih">
+                            <img id="tick2" src="/donasi_images/tick.png" alt="terpilih">
                         </div>
                         <input class="input_pilihan" onclick="showTick()" type="radio" value="donasi" id="Donasi" name="pilih">
                         <div class="gambar-pilihan">
@@ -98,7 +101,7 @@
 
                     <div class="pilihan">
                         <div class="tick">
-                            <img id="tick3" src="/form_kritik_images/tick.png" alt="terpilih">
+                            <img id="tick3" src="/donasi_images/tick.png" alt="terpilih">
                         </div>
                         <input class="input_pilihan" onclick="showTick()" type="radio" value="volunteer" id="Volunteer" name="pilih">
                         <div class="gambar-pilihan">
@@ -111,42 +114,124 @@
 
 
             <div class="rating">
-                <input type="radio" name="rate" id="rating-opt5" data-idx="0" hidden>
+                <input type="radio" value="5" name="rate" id="rating-opt5" data-idx="0" hidden>
                 <label for="rating-opt5"><span>Sangat Puas</span></label>
 
-                <input type="radio" name="rate" id="rating-opt4" data-idx="1" hidden>
+                <input type="radio" value="4" name="rate" id="rating-opt4" data-idx="1" hidden>
                 <label for="rating-opt4"><span>Puas</span></label>
                 
-                <input type="radio" name="rate" id="rating-opt3" data-idx="2" hidden>
+                <input type="radio" value="3" name="rate" id="rating-opt3" data-idx="2" hidden>
                 <label for="rating-opt3"><span>Cukup</span></label>
 
-                <input type="radio" name="rate" id="rating-opt2" data-idx="3" hidden>
+                <input type="radio" value="2" name="rate" id="rating-opt2" data-idx="3" hidden>
                 <label for="rating-opt2"><span>Kurang Puas</span></label>
 
-                <input type="radio" name="rate" id="rating-opt1" data-idx="4" hidden>
+                <input type="radio" value="1" name="rate" id="rating-opt1" data-idx="4" hidden>
                 <label for="rating-opt1"><span>Sangat Tidak Puas</span></label>
-            </div>
-
-            <script>
-                let circle = document.getElementById('rating')
-                circle.addEventListener('click', function(e) {
-                    e.target.classList.toggle('rotate-star')
-                })
-            </script>
-                
-            <div class="pilih-autofill">
-                <div class="autofill">
-                    <input class="input-autofill" type="radio" value="autofill1" name="autofill" id="autofill1">
-                    <label class="label-autofill" for="autofill1">Tampilan sangat bagus</label>
-                    <input class="input-autofill" type="radio" value="autofill2" name="autofill" id="autofill2">
-                    <label class="label-autofill" for="autofill2">Informasi mudah dimengerti</label>
-                    <input class="input-autofill" type="radio" value="autofill3" name="autofill" id="autofill3">
-                    <label class="label-autofill" for="autofill3">Sangat memuaskan, semoga sukses ke depannya</label>
-                </div>
             </div>
 
             <div class="input-text">
                 <p>Beri Masukan</p>
+            </div>
+                
+            <div class="pilih-autofill">
+                <div id="autofill_1">
+                    <input class="input-autofill" type="radio" value="autofill1" name="autofill" id="autofill1">
+                    <label class="label-autofill" for="autofill1" id="autofillText1">Sangat buruk</label>
+                    <input class="input-autofill" type="radio" value="autofill2" name="autofill" id="autofill2">
+                    <label class="label-autofill" for="autofill2" id="autofillText2">Tidak bisa dipaham</label>
+                    <input class="input-autofill" type="radio" value="autofill3" name="autofill" id="autofill3">
+                    <label class="label-autofill" for="autofill3" id="autofillText3">Mengecewakan</label>
+                </div>
+
+                <div id="autofill_2">
+                    <input class="input-autofill" type="radio" value="autofill4" name="autofill" id="autofill4">
+                    <label class="label-autofill" for="autofill4" id="autofillText1">Kurang bagus</label>
+                    <input class="input-autofill" type="radio" value="autofill5" name="autofill" id="autofill5">
+                    <label class="label-autofill" for="autofill5" id="autofillText2">Kurang bisa dipahami</label>
+                    <input class="input-autofill" type="radio" value="autofill6" name="autofill" id="autofill6">
+                    <label class="label-autofill" for="autofill6" id="autofillText3">Sebaiknya ditingkatkan lagi</label>
+                </div>
+
+                <div id="autofill_3">
+                    <input class="input-autofill" type="radio" value="autofill7" name="autofill" id="autofill7">
+                    <label class="label-autofill" for="autofill7" id="autofillText1">Biasa saja</label>
+                    <input class="input-autofill" type="radio" value="autofill8" name="autofill" id="autofill8">
+                    <label class="label-autofill" for="autofill8" id="autofillText2">Cukup baik</label>
+                    <input class="input-autofill" type="radio" value="autofill9" name="autofill" id="autofill9">
+                    <label class="label-autofill" for="autofill9" id="autofillText3">Sudah memenuhi kebutuhan saya</label>
+                </div>
+
+                <div id="autofill_4">
+                    <input class="input-autofill" type="radio" value="autofill10" name="autofill" id="autofill10">
+                    <label class="label-autofill" for="autofill10" id="autofillText1">Tampilan website baik</label>
+                    <input class="input-autofill" type="radio" value="autofill11" name="autofill" id="autofill11">
+                    <label class="label-autofill" for="autofill11" id="autofillText2">Informasi dapat dipahami dengan baik</label>
+                    <input class="input-autofill" type="radio" value="autofill12" name="autofill" id="autofill12">
+                    <label class="label-autofill" for="autofill12" id="autofillText3">Memuaskan, saya menikmati pengalamannya</label>
+                </div>
+
+                <div id="autofill_5">
+                    <input class="input-autofill" type="radio" value="autofill13" name="autofill" id="autofill13">
+                    <label class="label-autofill" for="autofill13" id="autofillText1">Tampilan sangat bagus</label>
+                    <input class="input-autofill" type="radio" value="autofill14" name="autofill" id="autofill14">
+                    <label class="label-autofill" for="autofill14" id="autofillText2">Informasi mudah dimengerti</label>
+                    <input class="input-autofill" type="radio" value="autofill15" name="autofill" id="autofill15">
+                    <label class="label-autofill" for="autofill15" id="autofillText3">Sangat memuaskan, semoga sukses ke depannya</label>
+                </div>
+
+            </div>
+            <script type="text/javascript">
+                let autofill1 = document.getElementById("autofill_1");
+                let autofill2 = document.getElementById("autofill_2");
+                let autofill3 = document.getElementById("autofill_3");
+                let autofill4 = document.getElementById("autofill_4");
+                let autofill5 = document.getElementById("autofill_5");
+                let testText = document.getElementById("test");
+                
+                let autofillFields = [autofill1, autofill2, autofill3, autofill4, autofill5];
+                autofillFields.forEach (field => {
+                    field.style.display = "none";
+                })
+
+                let findSelectedAutofill = () => {
+                    autofillFields.forEach (field => {
+                        field.style.display = "none";
+                    })
+
+                    let selectedAutofill = document.querySelector('input[name="rate"]:checked').value;
+                    console.log(selectedAutofill);
+
+                    if (selectedAutofill == "1") {
+                        autofill1.style.display = "flex";
+                        console.log("1");
+                    } else if (selectedAutofill == "2") {
+                        autofill2.style.display = "flex";
+                    } else if (selectedAutofill == "3") {
+                        autofill3.style.display = "flex";
+                    } else if (selectedAutofill == "4") {
+                        autofill4.style.display = "flex";
+                    } else if (selectedAutofill == "5") {
+                        autofill5.style.display = "flex";
+                    }
+                }
+
+                let autoFillRadio = document.querySelectorAll('input[name="rate"]');
+                autoFillRadio.forEach(btn => {
+                    btn.addEventListener("change", findSelectedAutofill);
+                });
+
+                findSelectedAutofill();
+
+                let circle = document.getElementById('rating');
+                circle.addEventListener('click', function(e) {
+                    e.target.classList.toggle('rotate-star');
+                });
+
+                
+            </script>
+
+            <div class="input-text">
                 <textarea class="form-control"></textarea>
             </div>
 
@@ -154,7 +239,7 @@
                 <input onclick="showPopup()" type="button" value="SUBMIT">
             </div>
         </form>
-    </div>
+     </div>
 
     <div class="footer">
         <div class="footer-logo">

@@ -13,197 +13,232 @@
     transition: .2s linear;
 }
 
-.hero_area {
-    position: relative;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+body {
+    background: linear-gradient(0deg, rgba(93,142,113,1) 5%, rgba(118,165,117,1) 100%);
 }
- 
-.hero_area .hero_bg_box {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.content {
+    height: fit-content;
+}
+
+.hero-image {
+    width: 100%;
+}
+
+#green-bg {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    overflow: hidden;
+    position: absolute;
+    object-fit: cover;
+    top: -20%;  
     z-index: -1;
 }
- 
-.hero_area .hero_bg_box .bg_img_box {
-    min-width: 100%;
-    min-height: 100%;
+
+.hero-text {
+    margin-top: 6%;
+    margin-right: 500px;
+    padding: 70px 0px 70px 105px;
+    height: fit-content;
 }
 
-.hero_area .hero_bg_box img {
-    max-width: 100%; /* Menyesuaikan ukuran gambar agar tidak terlalu besar */
-    height: auto;
-}
-/*end header section*/
-
-
-
-/* slider section */
-.slider_section .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Mengatur jarak antara .detail-box dan .img-box */
+.desc {
+    text-align: justify;
 }
 
-
-.slider_section .detail-box {
-    padding-bottom: 90px;
-    padding-left: 30px;
-}
- 
-.slider_section .detail-box h1 {
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: #ffffff;
-}
- 
-.slider_section .detail-box p {
-    color: #ffffff;
-    font-size: 15px;
-}
- 
-.slider_section .detail-box a {
-    display: inline-block;
-    text-transform: uppercase;
-    padding: 10px 45px;
-    background-color: #de8b3e ;
-    border: 1px solid #de8b3e ;
-    border-radius: 5px;
-    color: #ffffff;
-    margin-top: 15px;
-    margin-bottom: auto;
-}
- 
-.slider_section .detail-box a:hover {
-    background-color: transparent;
-    color: #de8b3e;
-}
-
-
-.slider_section .img-box {
-    flex: 1; /* Menggunakan flex-grow untuk menyesuaikan lebar .img-box */
-}
-
-
-.slider_section .img-box img {
-    max-width: 100%; /* Menyesuaikan ukuran gambar agar tidak terlalu besar */
-    height: auto;
-}
-
-
-/* coba awal */
-.box {
+.hero-text h1 {
     position: relative;
-    width: 250px; /* Mengatur lebar box menjadi 250px */
-    height: 250px; /* Tetapkan tinggi kotak */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    margin: 0 10px;
-    padding: 15px 15px;
-    background-color: #ECE9E4;
-    color: #406A40;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 40px; /* Tambahkan margin-top untuk menambah jarak dengan a */
-
-
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
-
-.box .img-box {
-    width: 240px;
-    height: 190px;
-    overflow: hidden; /* Tambahkan overflow: hidden; untuk mencegah gambar keluar dari kotak */
-    padding: 0;
+.hero-text a {
+    color: white;
+    font-size: 16px;
 }
 
-
-.box .img-box img {
-    width: 100%;
-    height: auto;
-}
-
-
-.name {
-    margin-top: 10px;
-    text-transform: uppercase;
-    margin-bottom: 0;
-}
-
-
-.hover-text {
+.illus {
     position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    top: 18%;
+    right: 6%;
+    height: 500px;
+    z-index: -1;
+}
+
+#illustration {
+    object-fit: contain;
+}
+
+.btn-donasi {
+    margin-top: 20px;
+    width: fit-content;
+    padding: 10px;
+    background-color: #ef7619;
+    border-radius: 10px;
+}
+
+.btn-donasi a {
+    font-family: 'Open Sans Hebrew', sans-serif;
+    color:#faf9ff;
+    font-weight: 550;
+    font-size: 16px;
+}
+.btn-donasi:hover{
+    cursor: pointer;
+    background-color: #ffa55c;
+}
+
+.container {
+    height: fit-content;
+    display: flex;  
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 60px 100px 60px 100px;
+    gap: 30px; 
+}
+
+.photo {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.photo img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.box {
+    display: flex;
+    flex: 1;
+    min-width: 30%;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    height: fit-content;
+}
+
+.box a {
+    color: #406A40;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#arahan {
+    display: none;
+}
+
+.unhovered {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box:hover .unhovered {
+    filter: sepia(0.6) brightness(0.4) blur(2px);
+    color:#ffffff;
+}
+
+.hovered {
+    opacity: 0;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang efek hover */
+    font-size: 19px;
+    font-weight: bold;
     color: white;
-    opacity: 0; /* Awalnya tidak terlihat */
-    transition: opacity 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-
-.box:hover .hover-text {
-    opacity: 1; /* Munculkan efek hover saat hover pada box */
+.box:hover .hovered {
+    opacity: 1;
 }
 
-
-.box:hover, .box.active {
-    background-color: #de8b3e;
-    color: #ffffff;
+.hovered p {
+    margin: auto 30px;
 }
 
-
-.feature_section {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+/* .hero-image {
+    background-color: aqua;
 }
 
-
-.feature_section .feature_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.content {
+    background-color: yellow;
 }
 
+.container {
+    background-color: green;
+} */
 
-.feature_section .feature_container .box {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-           
+
+@media (max-width: 1100px) {
+
+    #arahan {
+        display: block;
+        position: relative;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        top: 30px;
+        text-align: center;
+        width:fit-content;
+        margin: auto auto 20px auto;
+        padding: 10px 20px 10px 20px;
+        border-radius: 20px;
+        background-color: #232b28bf;
+    }
+    
+    .hero-text {
+        margin-right: 350px;
+    }
+
+    .illus {
+        right: 2%;
+        height: 70%;
+    }
+
+    .hovered {
+        font-size: 15px;
+    }
 }
+
+@media (max-width: 700px) {
+    .hero-text {
+        margin: 0;
+        border-radius: 10px;
+        margin: 20% 30px 30px 30px;
+        padding: 30px;
+        background-color: rgba(38, 52, 33, 0.782);
+    }
+
+    .illus {
+        top: 17%;
+        height: 60%;
+    }
+
+    .btn-donasi {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .unhovered a {
+        font-size: 15px;
+    }
+
+    .container {
+        justify-content: center;
+        display: flex;
+        padding: 10% 6% 10% 6%;
+        flex-wrap: wrap;
+        gap: 3%;
+    }
+
+    .box {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
