@@ -7,7 +7,7 @@
     height: 300px;
     border-radius: 10px;
     background-color: #ECE9E4;
-    box-shadow: -1px 0px 13px 0px rgba(168, 144, 115, 0.738);
+    box-shadow: -2px 3px 13px 0px rgba(160, 160, 160, 0.738);
     z-index: 1000;
 }
 
@@ -44,9 +44,9 @@
     width: 260px;
     height: 90px;
     border-radius: 10px 10px 0 0;
-    background-color: rgb(255, 166, 65);
+    background-color: rgb(224, 130, 22);
     position: absolute;
-    z-index: 1;
+    z-index: 1; 
 }
 
 .popup-account-text {
@@ -70,11 +70,17 @@
 }
 
 .account-button i {
+    width: 20px;
     margin-right: 10px;
 }
 
 .account-button {
     cursor: pointer;
+}
+
+.account-button a {
+    text-decoration: none;
+    color: black;
 }
 
 @media (max-width: 800px) {

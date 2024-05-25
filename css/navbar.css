@@ -166,8 +166,9 @@
     padding-top: 20px;
     padding-bottom: 50px;
     padding-left:60px;
-    padding-right:10px;
-    height: 300px;
+    padding-right:50px;
+    height: 210px;
+    justify-content: space-between;
     background-color: #ECE9E4;
     box-shadow: -1px -1px 10px 0px rgba(110, 101, 95, 0.34);
     z-index: 999;
@@ -180,36 +181,38 @@
     width:360px;
     color: #335733;
     font-family: 'Open Sans Hebrew', sans-serif;
-    font-size: 17px;
+    font-size: 13px;
 }
 
 .footer-logo img {
     display: block;
-    width:290px;
+    width:  210px;
 }
 
 .contacts{
+    width: 225px;
+    height: fit-content;
     margin-top: 21px;
 }
 
-.contact1, .contact2 {
-    max-width:100%;
+.contact {
     display: flex;
     margin-top: 10px;
     color: #335733;
 }
 
-#ig-logo, #fb-logo {
+#ig-logo, #fb-logo, #email-logo, #phone-logo {
     flex: 1.2;
-    font-size: 30px;
-    margin-right: 10px;
+    font-size: 22px;
+    text-align: center;
+    margin-right: 6px;
     color: #335733;
 }
 
 .contact-name {
     flex: 7;    
     margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'Open Sans Hebrew', sans-serif;
     font-weight: 500;
 }
@@ -244,7 +247,7 @@
     }
 
     .footer {
-        display:block;
+        display: block;
         font-size: 13px;
         width: 100%;
         padding: 50px;
@@ -253,14 +256,32 @@
     }
 
     .footer img {
+        margin: auto auto  10px auto;
+        padding-right: 20px;
         width: 80%;
     }
 
     .footer-logo {
-        width: 300px;
+        text-align: center;
+        width: 280px;
+        margin-bottom: 20px;
     }
 
-    .contacts a {
-        font-size: 18px;;
+    .contacts {
+        margin: auto;
+        padding-left: 20px;
+    }
+
+    .contact-name a {
+        font-size: 13px;
+    }
+
+    #ig-logo, #fb-logo, #email-logo, #phone-logo {
+        font-size: 15px;
+    }
+    
+    .contact-name {
+        margin-bottom: 3px;
+        font-family: 'Open Sans Hebrew', sans-serif;
     }
 }

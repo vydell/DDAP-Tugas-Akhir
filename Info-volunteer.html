@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/info-volunteer.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="Homepage.html">
+                    <img src="/navbar_images/footer-logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+
+            <input type="checkbox" id="check">
+            <ul class="menu">
+                <li><a href="Info-donasi.html">DONASI</a></li>
+                <li><a href="Info-volunteer.html">VOLUNTEER</a></li>
+                <li><a href="Halaman-Informasi.html">TENTANG KAMI</a></li>
+                <li><a href="FormKritikSaran.html">FEEDBACK</a></li>
+                <li id="masuk"><a href="Daftar.html">MASUK</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </ul>
+
+            <label for="check" class="open-menu"><i class="fa fa-bars"></i></label>
+        </div>
+    </nav>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="arrow-button">
+            <button type="button" id="sidebar-close" onclick="close()">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+            <button type="button" id="sidebar-open" onclick="open()">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+        </div>
+        
+        <div class="nav-buttons">
+            <div class="nav">
+                <div class="nav-logo">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                </div>
+                <a id="navtext">Informasi</a>
+            </div>
+
+            <div class="nav">
+                <div class="nav-logo">
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                </div>
+                <a id="navtext">Syarat</a>
+            </div>
+            
+            <div class="nav">
+                <div class="nav-logo">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </div>
+                <a id="navtext">Lokasi</a>
+            </div>
+
+            <div class="nav">
+                <div class="nav-logo">
+                    <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                </div>
+                <a id="navtext">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        let openSidebar = document.getElementById("sidebar-open");
+        let closeSidebar = document.getElementById("sidebar-close");
+        let sidebar = document.getElementById("sidebar");
+
+        function close() {
+            sidebar.style.right = "-200px";
+            openSidebar.style.opacity = "0";
+            closeSidebar.style.opacity = "1";
+        }
+
+        function open() {
+            sidebar.style.right = "20px";
+            closeSidebar.style.opacity = "0";
+            openSidebar.style.opacity = "1";
+        }
+    </script>
+
+
+    <img id="green-bg" src="/informasi_images/bg.png">
+
+
+    <div class="contents">
+        <h1 id="judul">
+            Informasi Volunteer
+        </h1>
+
+        <div class="syarat">
+            <div class="subjudul">
+                <h2>Syarat</h2>
+            </div>
+
+            <div class="deskripsi">
+                <h3>Syarat Umum</h3>
+                <ol type="1">
+                    <li>Persyaratan Usia: Harus berusia minimal 18 tahun (atau mendapat izin orang tua jika lebih muda).</li>
+                    <li>Kebugaran Jasmani: Kemampuan melakukan tugas fisik seperti mengangkat, membalik kompos, dan mengoperasikan peralatan.</li>
+                    <li>Komitmen Waktu: Ketersediaan untuk menjadi sukarelawan selama beberapa jam per minggu, dengan jangka waktu komitmen minimum (misalnya, tiga bulan).</li>
+                </ol>
+            </div>
+            
+            <div class="deskripsi">
+                <h3>Syarat Administrasi</h3>
+                <ol type="1">
+                    <li>Administratif
+                        Pendaftaran: Lengkapi aplikasi sukarelawan dan tanda tangani surat pernyataan yang mengakui risiko yang ada.</li>
+                    <li>Pemeriksaan Latar Belakang: Jalani pemeriksaan latar belakang, jika diperlukan oleh organisasi.</li>
+                    <li>Informasi Kontak Darurat: Berikan rincian kontak darurat.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="/navbar_images/logo_puspa.png" alt="logo" class="footer-logo">
+            <a>PT Puspa, FILKOM Universitas Brawijaya <br>Jl. Veteran, Ketawanggede, Kec. Lowokwaru, Kota Malang, Jawa Timur 65113</a>
+        </div>
+
+        <div class="contacts">
+            <div class="contact">
+                <a href="#" class="fa fa-instagram" id="ig-logo"></a>
+                <div class="contact-name">
+                    <a id="ig-name">bersama.puspa.id</a>
+                </div>
+            </div>
+
+            <div class="contact">
+                <a href="#" class="fa fa-facebook" id="fb-logo"></a>
+                <div class="contact-name">
+                    <a id="fb-name">Puspa_Indonesia</a>
+                </div>
+            </div>
+
+            <div class="contact">
+                <i class="fa fa-envelope-o" aria-hidden="true" id="email-logo"></i>
+                <div class="contact-name">
+                    <a id="email-name">puspaindonesia@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact">
+                <i class="fa fa-phone" aria-hidden="true" id="phone-logo"></i>
+                <div class="contact-name">
+                    <a id="phone-num">+62 812 1312 4701</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
