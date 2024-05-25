@@ -141,7 +141,7 @@ html { scroll-behavior: smooth; }
 .diagram4 {
     flex: 2.5;
     width: 100%;
-    max-height: 100%;
+    min-height: 100%;
 }
 
 .diagram-text {
@@ -335,8 +335,8 @@ html { scroll-behavior: smooth; }
 @media screen and (min-width: 600px) and (max-width: 1100px) {
     .diagram4 {
         justify-content: center;
-        width: 600px;
-        height: auto;
+        min-width: 100%;
+        height: 100%;
     }
 
     .diagram-text-big {
@@ -357,7 +357,11 @@ html { scroll-behavior: smooth; }
 
 }
 
-@media screen and (min-width: 650px) and (max-width: 600px) {
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 10px;
+    }
+
     .flexbox {
         min-width: 100%;
     }
@@ -375,20 +379,20 @@ html { scroll-behavior: smooth; }
     }
 
     .text {
-        width: 120px;
+        width: 250px;
         margin-left: 20px;
     }
 
     .flexbox-big {
+        padding: 30px 2px;
         display: block;
         justify-content: center;
     }
 
     .diagram4 {
         display: block;
+        min-width: 100%;
         justify-content: center;
-        width: 500px;
-        height: 400px;
     }
 }
 
@@ -410,7 +414,7 @@ html { scroll-behavior: smooth; }
     }
     
     .diagram4 {
-        height:auto;
+        height: 100%;
     }
         
     .text {

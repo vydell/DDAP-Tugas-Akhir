@@ -39,10 +39,12 @@ body {
     margin-right: 500px;
     padding: 70px 0px 70px 105px;
     height: fit-content;
+    text-justify: inter-character;
 }
 
 .desc {
     text-align: justify;
+    text-justify: inter-character;
 }
 
 .hero-text h1 {
@@ -122,7 +124,7 @@ body {
 .box a {
     color: #406A40;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: bolder;
     margin-top: 10px;
 }
 
@@ -181,6 +183,7 @@ body {
         display: block;
         position: relative;
         color: rgb(255, 255, 255);
+        font-size: 14px;
         font-weight: bold;
         top: 30px;
         text-align: center;
@@ -190,14 +193,23 @@ body {
         border-radius: 20px;
         background-color: #232b28bf;
     }
+
+    .box {
+        min-width: 40%;
+    }
     
     .hero-text {
         margin-right: 350px;
     }
 
+    .unhovered a {
+        font-size: 16px;
+    }
+
     .illus {
+        top: 120px;
         right: 2%;
-        height: 70%;
+        height: 400px;
     }
 
     .hovered {
@@ -206,6 +218,10 @@ body {
 }
 
 @media (max-width: 700px) {
+    .desc {
+        text-align: justify;
+        text-justify: inter-character;
+    }
     .hero-text {
         margin: 0;
         border-radius: 10px;
@@ -216,7 +232,7 @@ body {
 
     .illus {
         top: 17%;
-        height: 60%;
+        height: 370px;
     }
 
     .btn-donasi {
@@ -231,14 +247,14 @@ body {
     .container {
         justify-content: center;
         display: flex;
-        padding: 10% 6% 10% 6%;
+        padding: 10% 10%;
         flex-wrap: wrap;
         gap: 3%;
     }
 
     .box {
-        min-width: 100%;
-        margin-bottom: 20px;
+        min-width: 90%;
+        margin-bottom: 40px;
     }
 }
 

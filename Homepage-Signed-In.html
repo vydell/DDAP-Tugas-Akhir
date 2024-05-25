@@ -27,11 +27,11 @@
                 <li><a href="Homepage.html">VOLUNTEER</a></li>
                 <li><a href="Halaman-Informasi.html">TENTANG KAMI</a></li>
                 <li><a href="FormKritikSaran.html">FEEDBACK</a></li>
-                <li id="masuk"><a href="Daftar.html">MASUK</a></li>
+                <li onclick="showPopupAccount()" id="masuk"><a>AKUN</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
 
-            <label for="check" class="open-menu"><i class="fa fa-bars"></i></label>
+            <label for="check" class="open-menu"><i onclick="closePopupThroughHamburger()" class="fa fa-bars"></i></label>
         </div>
     </nav>
 
@@ -173,5 +173,52 @@
             </div>
         </div>
     </div>
+
+    <div class="popup-account" id="popup-account">
+        <div class="color"><a></a></div>
+
+        <div class="edit-button">
+            <img src="/donasi_images/Pen.png">
+        </div>
+
+        <div class="account-photo">
+            <img src="/daftar_images/foto-profil.jpg">
+        </div>
+
+        <div class="popup-account-text">
+            <h4>Adriansyah</h4>
+            <h5>ryanbo@gmail.com</h5>
+        </div>
+
+        <div class="popup-account-buttons">
+            <div class="account-button" id="payment-methods">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                <a>Metode pembayaran anda</a>
+            </div>
+            <div class="account-button">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <a>Keluar dari akun</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        function closePopupThroughHamburger() {
+            let popup = document.getElementById("popup-account");
+            popupDisplay = popup.style.display;
+            popup.style.display = "none";
+        }
+
+        function showPopupAccount() {
+            let popup = document.getElementById("popup-account");
+            popupDisplay = popup.style.display;
+            if(popupDisplay == "none") {
+                popup.style.display = "block";
+            } else {
+                popup.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

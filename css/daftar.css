@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url(https://fonts.googleapis.com/earlyaccess/opensanshebrewcondensed.css);
+
+*{
+    font-family: 'Open Sans Hebrew', serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+body {
+    background: #7F9F7F;
+    background-image: url("../homepage_images/hero_image2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contents {
+    width: 600px;
+    padding: 10px 50px 50px 50px;
+    height: 700px;
+    display: block;
+    justify-content: center;
+    background-color: #ECE9E4;
+    border-radius: 20px;
+    margin: 40px auto;
+}
+
+.signin-logo {
+    display: flex;
+    height: 160px;
+    justify-content: center;
+    user-select: none; 
+}
+
+#sign-in-logo {
+    object-fit: contain;
+}
+
+form {
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.sign-in, .sign-up {
+    width: 100%;
+    text-align: center;
+}
+
+#sign-in {
+    opacity: 1;
+}
+
+#sign-up {
+    opacity: 0;
+}
+
+.sign-in input, .sign-up input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 10px;
+    background-color: #fff9f9;
+    border: 1px solid rgb(195, 195, 195);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.btn-signin {
+    width: 100%;
+    height: fit-content;
+    margin: 20px auto;
+    background-color: #ECE9E4;
+}
+
+.btn-signin button, #sign-up-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(223, 96, 11);
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.divider {
+    width: 100%;
+    display: flex;
+    user-select: none; 
+}
+
+#horizontal-line {
+    flex: 2;
+    border-bottom: 1px solid rgb(19, 12, 3);
+}
+
+.divider a {
+    position: relative;
+    top: 10px;
+    flex: 1;
+}
+
+.login-with {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 0 20px;
+    margin: 60px auto 13px auto;
+}
+
+.logo-google {
+    margin-right: 8px;
+    display: flex;
+    height: 25px;
+}
+
+.logo-google img {
+    object-fit: contain;
+}
+
+.login-with a{
+    height: fit-content;
+    flex: 5;
+    margin: auto;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgot-pass {
+    font-size: 14px;
+    cursor: pointer;
+    color: rgb(0, 112, 223);
+}
+
+.alternate {
+    width: 600px;
+    height: 65px;
+    margin: 30px auto;
+    background-color: #ECE9E4;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.sign-in-alt, .sign-up-alt {
+    text-align: center;
+}
+
+#sign-in-alt {
+    opacity: 1;
+}
+
+#sign-up-alt {
+    opacity: 0;
+}
+
+#sign-up-switch, #sign-in-switch {
+    margin-left: 10px;
+    color: rgb(0, 112, 223);
+    cursor: pointer;
+}
+
+.btn-signin a{
+    text-decoration: none;
+    color: white;
+}
+
+/* sign-up */
+.signup-inputs {
+    margin-top: 30px;
+}
+
+.sign-up {
+    position: relative;
+    top: -420px;
+    z-index: -1;
+}
+
+.sign-up-alt {
+    position: relative;
+    top: -22px;
+    z-index: -1;
+}
+
+@media (max-width: 600px) {
+    .contents {
+        margin-top: 40%;
+        padding: 20px;
+        width: 100%;
+        border-radius: 40px;
+        padding-bottom: 300px;
+        margin-bottom: -40px;;
+    }
+
+    .logo-google {
+        width: 40px;
+    }
+
+    .signin-logo {
+        height: 100px;
+    }
+
+    .sign-in input {
+        padding: 8px 15px;
+    }
+
+    .login-with {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo-google {
+        width: 25px;
+        display: flex;
+    }
+
+    .login-with-text {
+        width: fit-content;
+        text-align: center;
+        margin-right: 5%;
+    }
+
+    .login-with a {
+        width: 80px;
+    }
+    .login-with span {
+        flex: 0;
+    }
+
+    .sign-in input {
+        width: 100%;
+    }
+}
