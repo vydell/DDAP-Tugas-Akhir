@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/popup-confirmation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/info-volunteer.css">
 </head>
@@ -14,7 +15,7 @@
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo">
-                <a href="Homepage.html">
+                <a href="Homepage-Signed-In.html">
                     <img src="/navbar_images/footer-logo.png" alt="logo" class="logo">
                 </a>
             </div>
@@ -25,7 +26,7 @@
                 <li><a href="Info-volunteer.html">VOLUNTEER</a></li>
                 <li><a href="Halaman-Informasi.html">TENTANG KAMI</a></li>
                 <li><a href="FormKritikSaran.html">FEEDBACK</a></li>
-                <li id="masuk"><a href="Daftar.html">MASUK</a></li>
+                <li id="masuk"><a onclick="showPopupAccount()">AKUN</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
 
@@ -235,6 +236,7 @@
             <div class="subjudul">
                 <h2>Daftar Menjadi Volunteer Sekarang!</h2>
             </div>
+
             <div class="deskripsi" id="radio-role">
                 <div class="role">
                     <input type="radio" name="role" id="pengumpul" />
@@ -260,6 +262,12 @@
                     </div>
                     <label for="pembagi">Pendukung Logistik</label>
                 </div>
+            </div>
+
+            <div class="btn-daftar">
+                <button onclick="showPopup()" id="btn-daftar">
+                    <a>Daftar</a>
+                </button>
             </div>
         </div>
     </div>
@@ -301,6 +309,29 @@
             </div>
         </div>
     </div>
+
+    <!-- POPUP KONFIRMASI -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup-confirm" id="popup-confirm">
+        <img class="tick_img" src="/donasi_images/tick.png" width="80px" height="80px">
+        <div class="text-popup">
+            <h2>Terima kasih!</h2>
+            <a>Permintaan volunteer anda telah kami terima. <br>Status permintaan anda dan informasi selanjutnya akan dikirimkan ke e-mail anda.</a>
+        </div>
+        <button class="btn-kembali">
+            <a href="Homepage-Signed-In.html">Kembali</a>
+        </button>
+    </div>
+
+    <script>
+        function showPopup() {
+            let popup = document.getElementById("popup-confirm");
+            let overlay = document.getElementById("overlay");
+            popup.style.visibility = "visible";
+            overlay.style.visibility = "visible";
+        }
+    </script>
 
 </body>
 </html>

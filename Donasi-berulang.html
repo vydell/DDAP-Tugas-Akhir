@@ -6,6 +6,7 @@
     <title>PUSPA</title>
 
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/popup-confirmation.css">
     <link rel="stylesheet" href="/css/donasiberulang.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -13,7 +14,7 @@
     <nav class="navbar">
         <div class="navdiv">
             <div class="logo">
-                <a href="Homepage.html">
+                <a href="Homepage-Signed-In.html">
                     <img src="/navbar_images/footer-logo.png" alt="logo" class="logo">
                 </a>
             </div>
@@ -24,7 +25,7 @@
                 <li><a href="Info-volunteer.html">VOLUNTEER</a></li>
                 <li><a href="Halaman-Informasi.html">TENTANG KAMI</a></li>
                 <li><a href="FormKritikSaran.html">FEEDBACK</a></li>
-                <li id="masuk"><a href="Daftar.html">MASUK</a></li>
+                <li id="masuk"><a onclick="showPopupAccount()">AKUN</a></li>
                 <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </ul>
 

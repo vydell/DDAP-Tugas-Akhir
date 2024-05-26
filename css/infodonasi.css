@@ -96,12 +96,12 @@ html { scroll-behavior: smooth; }
     text-align: justify;
     color: #406A40;
 }
+
 .donasi-illus {
     display: flex;
     width: fit-content;
     height: 300px;
     margin: 30px auto;
-    padding-left: 40px;
     justify-content: center;
 }
 

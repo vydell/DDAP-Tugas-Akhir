@@ -217,6 +217,11 @@
     font-weight: 500;
 }
 
+#masuk a {
+    background-color: #335733;
+    color:#ECE9E4;
+}
+
 .hyperlink-local {
     flex: 10;
     height: 30px;
