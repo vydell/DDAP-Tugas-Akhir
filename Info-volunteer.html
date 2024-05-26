@@ -35,34 +35,34 @@
 
     <nav class="sidebar" id="sidebar">
         <div class="arrow-button">
-            <button type="button" id="sidebar-close" onclick="close()">
+            <button type="button" id="sidebar-close" onclick="closedSidebar()">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </button>
-            <button type="button" id="sidebar-open" onclick="open()">
+            <button type="button" id="sidebar-open" onclick="openedSidebar()">
                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
         </div>
         
-        <div class="nav-buttons">
+        <div class="nav-buttons" id="nav-buttons">
             <div class="nav">
                 <div class="nav-logo">
                     <i class="fa fa-question-circle" aria-hidden="true"></i>
                 </div>
-                <a id="navtext">Informasi</a>
+                <a href="#informasi" id="navtext">Informasi</a>
             </div>
 
-            <div class="nav">
+            <div class="nav" >
                 <div class="nav-logo">
                     <i class="fa fa-check-square-o" aria-hidden="true"></i>
                 </div>
-                <a id="navtext">Syarat</a>
+                <a href="#syarat" id="navtext">Syarat</a>
             </div>
             
             <div class="nav">
                 <div class="nav-logo">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </div>
-                <a id="navtext">Lokasi</a>
+                <a href="#lokasi" id="navtext">Lokasi</a>
             </div>
 
             <div class="nav">
@@ -77,18 +77,22 @@
     <script>
         let openSidebar = document.getElementById("sidebar-open");
         let closeSidebar = document.getElementById("sidebar-close");
-        let sidebar = document.getElementById("sidebar");
+        let sidebar = document.getElementById("nav-buttons");
 
-        function close() {
-            sidebar.style.right = "-200px";
-            openSidebar.style.opacity = "0";
-            closeSidebar.style.opacity = "1";
+        function closedSidebar() {
+            openSidebar.style.opacity = "0.8";
+            openSidebar.style.zIndex = "2";
+            closeSidebar.style.opacity = "0";
+            closeSidebar.style.zIndex = "1";
+            sidebar.style.opacity = "0";
         }
 
-        function open() {
-            sidebar.style.right = "20px";
-            closeSidebar.style.opacity = "0";
-            openSidebar.style.opacity = "1";
+        function openedSidebar() {
+            openSidebar.style.opacity = "0";
+            openSidebar.style.zIndex = "1";
+            closeSidebar.style.opacity = "0.8";
+            closeSidebar.style.zIndex = "2";
+            sidebar.style.opacity = "0.8";
         }
     </script>
 
@@ -98,10 +102,74 @@
 
     <div class="contents">
         <h1 id="judul">
-            Informasi Volunteer
+            INFORMASI VOLUNTEER
         </h1>
 
-        <div class="syarat">
+        <div class="container" id="informasi">
+            <div class="subjudul">
+                <h2>Informasi Umum</h2>
+            </div>
+            <div class="para">
+                <p>
+                    Kegiatan pembuatan kompos adalah upaya kolaboratif yang dikoordinasi oleh PSUPA untuk menghasilkan pupuk organik dari bahan-bahan organik yang dapat didaur ulang. Dalam kegiatan ini, anggota komunitas bekerja sama untuk mengumpulkan, mendaur ulang, dan mengolah bahan-bahan organik menjadi kompos yang kaya akan nutrisi, hingga mencapai tangan petani yang membutuhkannya. Tujuan utamanya adalah untuk mengurangi limbah organik yang masuk ke tempat pembuangan sampah, serta mendukung petani lokal dengan bantu memenuhi kebutuhan pupuk mereka.
+                </p>
+            </div>
+            
+
+            <div class="deskripsi">
+                <div class="judul-deskripsi">
+                    <h3>Pengumpul Bahan Organik</h3>
+                    <div class="judul-deskripsi-img">
+                        <img src="/volunteer_images/Pengumpulan.png">
+                    </div>
+                </div>
+                <ol type="1">
+                    <li>
+                        Bertugas untuk mengumpulkan bahan organik seperti sisa makanan, daun kering, rumput, dan lainnya dari anggota komunitas atau lokasi lain yang memungkinkan.
+                    </li>
+                    <li>
+                        Memastikan bahwa bahan organik yang dikumpulkan bersih dan bebas dari bahan kimia berbahaya.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="deskripsi">
+                <div class="judul-deskripsi">
+                    <h3>Operator Pengompos</h3>
+                    <div class="judul-deskripsi-img">
+                        <img src="/volunteer_images/Pengomposan.png">
+                    </div>
+                </div>
+
+                <ol type="1">
+                    <li>
+                        Merawat tumpukan kompos, termasuk mengaduk dan memutar tumpukan secara teratur.
+                    </li>
+                    <li>
+                        Memantau suhu, kelembaban, dan kondisi lainnya untuk memastikan proses pengomposan berjalan dengan baik.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="deskripsi">
+                <div class="judul-deskripsi">
+                    <h3>Pendukung Logistik</h3>
+                    <div class="judul-deskripsi-img">
+                        <img src="/volunteer_images/Distribusi.png">
+                    </div>
+                </div>
+                <ol type="1">
+                    <li>
+                        Bertanggung jawab atas distribusi kompos kepada anggota komunitas atau masyarakat yang membutuhkan.
+                    </li>
+                    <li>
+                        Mengatur logistik pengiriman dan memastikan kompos diterima oleh petani yang membutuhkan.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container" id="syarat">
             <div class="subjudul">
                 <h2>Syarat</h2>
             </div>
@@ -109,20 +177,54 @@
             <div class="deskripsi">
                 <h3>Syarat Umum</h3>
                 <ol type="1">
-                    <li>Persyaratan Usia: Harus berusia minimal 18 tahun (atau mendapat izin orang tua jika lebih muda).</li>
-                    <li>Kebugaran Jasmani: Kemampuan melakukan tugas fisik seperti mengangkat, membalik kompos, dan mengoperasikan peralatan.</li>
-                    <li>Komitmen Waktu: Ketersediaan untuk menjadi sukarelawan selama beberapa jam per minggu, dengan jangka waktu komitmen minimum (misalnya, tiga bulan).</li>
+                    <li>
+                        Persyaratan Usia: Harus berusia minimal 18 tahun (atau mendapat izin orang tua jika lebih muda).
+                    </li>
+                    <li>
+                        Kebugaran Jasmani: Kemampuan melakukan tugas fisik seperti mengangkat, membalik kompos, dan mengoperasikan peralatan.
+                    </li>
+                    <li>
+                        Komitmen Waktu: Ketersediaan untuk menjadi sukarelawan selama beberapa jam per minggu, dengan jangka waktu komitmen minimum (misalnya, tiga bulan).
+                    </li>
                 </ol>
             </div>
             
             <div class="deskripsi">
                 <h3>Syarat Administrasi</h3>
                 <ol type="1">
-                    <li>Administratif
-                        Pendaftaran: Lengkapi aplikasi sukarelawan dan tanda tangani surat pernyataan yang mengakui risiko yang ada.</li>
-                    <li>Pemeriksaan Latar Belakang: Jalani pemeriksaan latar belakang, jika diperlukan oleh organisasi.</li>
-                    <li>Informasi Kontak Darurat: Berikan rincian kontak darurat.</li>
+                    <li>
+                        Administratif Pendaftaran: Lengkapi aplikasi sukarelawan dan tanda tangani surat pernyataan yang mengakui risiko yang ada.
+                    </li>
+                    <li>
+                        Pemeriksaan Latar Belakang: Jalani pemeriksaan latar belakang, jika diperlukan oleh organisasi.
+                    </li>
+                    <li>
+                        Informasi Kontak Darurat: Berikan rincian kontak darurat.
+                    </li>
                 </ol>
+            </div>
+        </div>
+
+
+        <div class="container" id="lokasi">
+            <div class="deskripsi">
+                <div class="judul-deskripsi">
+                    <h3>Lokasi Petani yang Kami Bantu</h3>
+                    <div class="judul-deskripsi-img">
+                        <img src="/volunteer_images/Lokasi.png">
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        Desa Sulek Bondowoso, Kecamatan Tlogosari, Kabupaten Bondowoso, Provinsi Jawa Timur
+                    </li>
+                    <li>
+                        Desa Kedungbunder, Kecamatan Gempol, Kabupaten Cirebon, Provinsi Jawa Barat
+                    </li>
+                    <li>
+                        Desa Bulakrejo, Kecamatan Sukoharjo, Sukoharjo, Jawa Tengah
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
