@@ -14,10 +14,10 @@
 .edit-button {
     display: flex;
     position: relative;
-    left: 220px;
-    top: 53px;
-    width: 25px;
-    height: 25px;
+    left: 235px;
+    top: 65px;
+    width: 16px;
+    height: 16px;
     cursor: pointer;
 }
 

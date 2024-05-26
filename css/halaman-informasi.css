@@ -14,7 +14,7 @@
 }
 
 body {
-    background: linear-gradient(0deg, rgba(93,142,113,1) 5%, rgba(118,165,117,1) 100%);
+    background-image: linear-gradient( 12.6deg,  rgb(61, 157, 106) 11.2%, rgb(59, 180, 155) 91.1% );
 }
 
 .content {
