@@ -89,10 +89,40 @@
         
             <div class = "space"> </div>
             
-            <div class = "Pilih-Metode">
-                <label for="payment">Pilih metode pembayaran</label><br>
-                <input type="text" id="payment" name="payment"><br>
+            <div class="metode-pembayaran">
+                <div class="payment-menu">
+                    <label for="payment-options">Metode Pembayaran</label>
+                    <div onclick="cekMenu()" class="payment-btn">
+                        <span id="payment-btn-text">Pilih metode pembayaran</span>
+                        <i id="menu-open" class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <i id="menu-close" class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </div>
+                </div>
+            
+                <ul class="payment-options" id="payment-options">
+                    <li class="payment-option"> 
+                        <div class="logo-bank">
+                            <img src="/donasi_images/Logo-BCA.png">
+                        </div>
+                        <span class="payment-option-text">BCA Virtual Account</span>
+                    </li>
+            
+                    <li class="payment-option">
+                        <div class="logo-bank">
+                            <img src="/donasi_images/logo_Mandiri.png">
+                        </div>
+                        <span class="payment-option-text">Mandiri Virtual Account</span>
+                    </li>
+            
+                    <li class="payment-option">
+                        <div class="logo-bank">
+                            <img src="/donasi_images/logo_VISA.png">
+                        </div>
+                        <span class="payment-option-text">Kartu Debit/Credit</span>
+                    </li>
+                </ul>
             </div>
+            
             
             <!-- <div class = "space"> </div>
             
@@ -165,6 +195,47 @@
             </div>
         </div>
     </div>
+
+    <!-- METODE PEMBAYARAN -->
+    <script>
+        let openMenu = document.getElementById("menu-open");
+        let closeMenu = document.getElementById("menu-close");
+        let paymentOptions = document.getElementById("payment-options");
+        let status = "tertutup";
+        paymentOptions.style.display = "none";
+        let selectedPayment = document.getElementById("payment-btn-text");
+
+        let options = document.querySelectorAll(".payment-option");
+
+        options.forEach(option => {
+            option.addEventListener("click", () => {
+                selectedPayment.textContent = option.textContent;
+            })
+        })
+
+        function cekMenu() {
+            if (status == "tertutup") {
+                bukaMenuPembayaran();
+                status = "terbuka";
+            } else if (status == "terbuka") {
+                tutupMenuPembayaran();
+                status = "tertutup";
+            }
+
+            function bukaMenuPembayaran() {
+                openMenu.style.display = "none";
+                closeMenu.style.display = "block";
+                paymentOptions.style.display = "block";  
+            }
+
+            function tutupMenuPembayaran() {
+                openMenu.style.display = "block";
+                closeMenu.style.display = "none";
+                paymentOptions.style.display = "none";
+            }
+            console.log(status);
+        }
+    </script>
 
 
     <!-- POPUP KONFIRMASI -->

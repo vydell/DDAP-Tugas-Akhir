@@ -200,6 +200,65 @@ body {
   color: rgb(130, 56, 21);
 }
 
+
+/* metode pembayaran */
+.payment-menu {
+  margin: 20px 0;
+}
+
+.payment-btn {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #cdcdcd;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #e8e8e8;
+  width: 390px;
+}
+
+#payment-options {
+  position: relative;
+  width: 390px;
+  padding: 7px 20px;
+  border: 1px solid #cccccc;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.payment-option {
+  width: 90%;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  align-items: center;
+  display: flex;
+  margin: 10px;
+}
+
+.payment-option:hover {
+  background-color: #cdcdcd68;
+}
+
+.logo-bank {
+  display: flex;
+  width: 70px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.logo-bank img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+#menu-close {
+  display: none;
+}
+
 /* text field */
 .Pilih-Metode {
   color: #2D3E2E;
@@ -284,7 +343,7 @@ body {
 
   .contents {
     margin-top: 30px;
-    padding: 100px;
+    padding: 50px;
     min-width: 80%;
   }
 
@@ -320,6 +379,23 @@ body {
   label {
     font-size: 14px;
   }
+
+  .payment-menu, .payment-btn, #payment-options {
+    width: 60%;
+    min-width: 300px;
+    font-size: 14px;
+  }
+
+  .payment-option {
+    padding: 10px;
+  }
+
+  .logo-bank {
+    max-width: 40px;
+    height: auto;
+    padding: 0;
+  }
+
 }     
 
 @media screen and (max-width: 500px) {

@@ -4,16 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .payment-btn {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #cdcdcd;
+            padding: 15px 30px;
+            border-radius: 10px;
+            background-color: #e8e8e8;
+            width: 400px;
+            margin: 20px;
+        }
+        
+        #payment-options {
+            position: relative;
+            margin-left: 20px;
+            width: 415px;
+            padding: 7px 20px;
+            border: 1px solid #cccccc;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            display: block;
+        }
+
+        .payment-option {
+            width: 90%;
+            border-radius: 5px;
+            padding: 5px;
+            padding-left: 20px;
+            align-items: center;
+            display: flex;
+            margin: 10px;
+        }
+
+        .payment-option:hover {
+            background-color: #cdcdcd68;
+        }
+
+        .logo-bank {
+            display: flex;
+            width: 70px;
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        .logo-bank img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #menu-close {
+            display: none;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+    <div class="payment-menu">
+        <div onclick="cekMenu()" class="payment-btn">
+            <span id="payment-btn-text">Pilih metode pembayaran</span>
+            <i id="menu-open" class="fa fa-chevron-down" aria-hidden="true"></i>
+            <i id="menu-close" class="fa fa-chevron-up" aria-hidden="true"></i>
+        </div>
+    </div>
 
+    <ul class="payment-options" id="payment-options">
+        <li class="payment-option"> 
+            <div class="logo-bank">
+                <img src="/donasi_images/Logo-BCA.png">
+            </div>
+            <span class="payment-option-text">BCA Virtual Account</span>
+        </li>
 
-    <label id="test">test</label>
+        <li class="payment-option">
+            <div class="logo-bank">
+                <img src="/donasi_images/logo_Mandiri.png">
+            </div>
+            <span class="payment-option-text">Mandiri Virtual Account</span>
+        </li>
+
+        <li class="payment-option">
+            <div class="logo-bank">
+                <img src="/donasi_images/logo_VISA.png">
+            </div>
+            <span class="payment-option-text">Kartu Debit/Credit</span>
+        </li>
+    </ul>
 
     <script>
-        let test = document.getElementById("test");
-        test.innerText = "changed";
+        let openMenu = document.getElementById("menu-open");
+        let closeMenu = document.getElementById("menu-close");
+        let paymentOptions = document.getElementById("payment-options");
+        let status = "tertutup";
+        paymentOptions.style.display = "none";
+        let selectedPayment = document.getElementById("payment-btn-text");
+
+        let options = document.querySelectorAll(".payment-option");
+
+        options.forEach(option => {
+            option.addEventListener("click", () => {
+                selectedPayment.textContent = option.textContent;
+            })
+        })
+
+        function cekMenu() {
+            if (status == "tertutup") {
+                bukaMenuPembayaran();
+                status = "terbuka";
+            } else if (status == "terbuka") {
+                tutupMenuPembayaran();
+                status = "tertutup";
+            }
+
+            function bukaMenuPembayaran() {
+                openMenu.style.display = "none";
+                closeMenu.style.display = "block";
+                paymentOptions.style.display = "block";  
+            }
+
+            function tutupMenuPembayaran() {
+                openMenu.style.display = "block";
+                closeMenu.style.display = "none";
+                paymentOptions.style.display = "none";
+            }
+            console.log(status);
+        }
     </script>
 </body>
 </html>
